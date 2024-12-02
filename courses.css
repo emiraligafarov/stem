@@ -1,0 +1,92 @@
+
+  
+       /* Стили для курсы */ 
+    
+
+       body {
+        font-family: 'Roboto', sans-serif;
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(135deg, #e9f7fe, #ffffff);
+        color: #333;
+    }
+    
+    header {
+        text-align: center;
+        background: linear-gradient(90deg, #000000, #0056b3);
+        color: white;
+        padding: 20px 0;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-bottom: 2px solid #0056b3;
+    }
+    
+    h1 {
+        margin: 0;
+        font-size: 36px;
+        letter-spacing: 1px;
+    }
+    
+    main {
+        padding: 40px 20px;
+        max-width: 1200px;
+        margin: auto;
+    }
+    
+    .course-section {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+    
+    .course {
+        background: white;
+        border-radius: 12px;
+        padding: 25px;
+        width: 320px;
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        text-align: center;
+    }
+    
+    .course:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    }
+    
+    .course h2 {
+        margin: 0 0 20px;
+        font-size: 26px;
+        color: #007BFF;
+        font-weight: 700;
+    }
+    
+    .course ul {
+        list-style: none;
+        padding: 0;
+    }
+    
+    .course ul li {
+        margin: 15px 0;
+    }
+    
+    .course ul li a {
+        text-decoration: none;
+        color: #333;
+        font-size: 18px;
+        font-weight: 500;
+        padding: 8px 12px;
+        border: 2px solid #007BFF;
+        border-radius: 8px;
+        background: linear-gradient(90deg, #007BFF, #0056b3);
+        color: white;
+        display: inline-block;
+        transition: background0.3s ease, color 0.3s ease;
+    }
+    
+    .course ul li a:hover {
+        background: #ffffff;
+        color: #007BFF;
+        border-color: #0056b3;
+    }
+    
