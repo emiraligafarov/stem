@@ -1,0 +1,187 @@
+
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Физика</title>
+    <style>
+        /* Стили для курсов */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #202b5a, #ffffff);
+            color: #000000;
+            height: 100vh; /* Устанавливаем высоту экрана */
+            display: flex; /* Используем flex для центрирования */
+            justify-content: center; /* Центрируем по горизонтали */
+            align-items: center; /* Центрируем по вертикали */
+        }
+
+        header {
+            text-align: center;
+            position: relative;
+            width: 100%; /* Занимает всю ширину экрана */
+            max-width: 800px; /* Ограничиваем ширину для красоты */
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            height: 200px; /* Толщина линии */
+            background: #141b57;
+            transform: translateY(-50%);
+            z-index: -1; /* Линия на заднем плане */
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 48px;
+            letter-spacing: 1px;
+            color: white;
+            background: #385070;
+            padding: 20px 40px;
+            display: inline-block;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        main {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .course-section {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .course {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            width: 320px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+        }
+
+        .course:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .course img {
+            width: 100px;
+            height: auto;
+            margin-bottom: 15px;
+            border-radius: 50%; /* Круглая форма логотипа */
+            border: 2px solid #ffffff;
+        }
+
+        .course h2 {
+            margin: 0 0 20px;
+            font-size: 26px;
+            color: #000000;
+            font-weight: 700;
+        }
+
+        .course ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .course ul li {
+            margin: 15px 0;
+        }
+
+        .course ul li a {
+            text-decoration: none;
+            color: #333;
+            font-size: 18px;
+            font-weight: 500;
+            padding: 8px 12px;
+            border: 2px solid #000000;
+            border-radius: 8px;
+            background: linear-gradient(90deg, #000000, #0056b3);
+            color: white;
+            display: inline-block;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+
+        .course ul li a:hover {
+            background: #ffffff;
+            color: #007BFF;
+            border-color: #000000;
+        }
+
+        .back-button {
+            display: bottom;
+            margin-top: 10px;
+            font-size: 18px;
+            color: #fefefe;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 8px 12px;
+            border: 2px solid #e6e6e6;
+            border-radius: 8px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .back-button:hover {
+            background-color: #184172;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Физика</h1>
+        <a href="courses.html" class="back-button">← Назад к курсам</a>
+    </header>
+
+    <main>
+        <section>
+            <h2>Разделы физики</h2>
+            <div class="course-section">
+                <div class="course">
+                    <h2>Механика</h2>
+                    <p>Изучайте законы движения и силы.</p>
+                    <a href="#">Подробнее</a>
+                </div>
+                <div class="course">
+                    <h2>Молекулярная физика</h2>
+                    <p>Исследуйте поведение частиц на микроскопическом уровне.</p>
+                    <a href="#">Подробнее</a>
+                </div>
+                <div class="course">
+                    <h2>Термодинамика</h2>
+                    <p>Изучайте теплоту и ее влияние на материю.</p>
+                    <a href="#">Подробнее</a>
+                </div>
+                <div class="course">
+                    <h2>Электричество</h2>
+                    <p>Исследуйте природу электрических явлений.</p>
+                    <a href="#">Подробнее</a>
+                </div>
+                <div class="course">
+                    <h2>Квантовая физика</h2>
+                    <p>Откройте мир микрочастиц и их странных свойств.</p>
+                    <a href="#">Подробнее</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>

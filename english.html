@@ -1,0 +1,206 @@
+
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Английский язык</title>
+    <style>
+        /* Стили для курсов */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #205a59, #ffffff);
+            color: #000000;
+            height: 100vh; /* Устанавливаем высоту экрана */
+            display: flex; /* Используем flex для центрирования */
+            justify-content: center; /* Центрируем по горизонтали */
+            align-items: center; /* Центрируем по вертикали */
+        }
+
+        header {
+            text-align: center;
+            position: relative;
+            width: 100%; /* Занимает всю ширину экрана */
+            max-width: 800px; /* Ограничиваем ширину для красоты */
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            height: 200px; /* Толщина линии */
+            background: #145755;
+            transform: translateY(-50%);
+            z-index: -1; /* Линия на заднем плане */
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 48px;
+            letter-spacing: 1px;
+            color: white;
+            background: #386c70;
+            padding: 20px 40px;
+            display: inline-block;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        main {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .course-section {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .course {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            width: 320px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+        }
+
+        .course:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .course img {
+            width: 100px;
+            height: auto;
+            margin-bottom: 15px;
+            border-radius: 50%; /* Круглая форма логотипа */
+            border: 2px solid #ffffff;
+        }
+
+        .course h2 {
+            margin: 0 0 20px;
+            font-size: 26px;
+            color: #000000;
+            font-weight: 700;
+        }
+
+        .course ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .course ul li {
+            margin: 15px 0;
+        }
+
+        .course ul li a {
+            text-decoration: none;
+            color: #333333;
+            font-size: 18px;
+            font-weight: 500;
+            padding: 8px 12px;
+            border: 2px solid #000000;
+            border-radius: 8px;
+            background: linear-gradient(90deg, #000000, #0056b3);
+            color: white;
+            display: inline-block;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+
+        .course ul li a:hover {
+            background: #ffffff;
+            color: #007BFF;
+            border-color: #000000;
+        }
+
+        .back-button {
+            display: bottom;
+            margin-top: 10px;
+            font-size: 18px;
+            color: #fefefe;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 8px 12px;
+            border: 2px solid #e6e6e6;
+            border-radius: 8px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .back-button:hover {
+            background-color: #184172;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Английский язык</h1>
+        <a href="courses.html" class="back-button">← Назад к курсам</a>
+    </header>
+
+    <main>
+        <section>
+            <h2>Уровни Английского языка</h2>
+            <div class="course-section">
+                <div class="course">
+                    <h2>Beginner (A1)</h2>
+                    <p> На этом уровне вы начинаете изучать английский. Вы можете понимать и использовать простые фразы и выражения для удовлетворения базовых потребностей.</p>
+                    <a href="#">Подробнее</a>
+                </div>
+                <div class="course">
+                    <h2>Elementary (A1)</h2>
+                    <p>Этот уровень позволяет вам использовать базовый английский в повседневных ситуациях. Вы можете задавать простые вопросы и понимать короткие, простые ответы.</p>
+                    <a href="#">Подробнее</a>
+                </div>
+                <div class="course">
+                    <h2>Pre-Intermediate (A2)</h2>
+                    <p>На уровне Pre-Intermediate вы начинаете общаться на более сложные темы, описывать действия в прошлом и будущем, а также понимать основные фразы, связанные с работой и повседневной жизнью.</p>
+                    <a href="#">Подробнее</a>
+                </div>
+                <div class="course">
+                    <h2>Intermediate (B1)</h2>
+                    <p> Вы можете вести разговоры на различные темы, уверенно понимаете тексты средней сложности и можете выражать свои мысли в стандартных ситуациях.</p>
+                
+                   
+                    <a href="#">Подробнее</a>
+
+                </div>
+                <div class="course">
+                    <h2>Advanced (B2)</h2>
+                    <p>На этом уровне вы уверенно общаетесь на сложные темы, понимаете широкий спектр материалов, включая статьи, фильмы и тексты, и можете выражать свои мысли более точно и выразительно.</p>
+                    <a href="#">Подробнее</a>
+                </div>
+                <div class="course">
+                    <h2>Advanced (C1)</h2>
+                    <p>Вы обладаете высокой степенью уверенности в общении. Вы можете понимать и использовать сложные, нюансированные фразы, общаться свободно и эффективно в любых ситуациях.</p>
+                    <a href="#">Подробнее</a>
+                </div>
+                <div class="course">
+                    <h2>Advanced (C2)</h2>
+                    <p>Это высший уровень, когда вы можете без труда понимать практически все, что слышите или читаете, и легко выражать свои мысли. У вас есть возможность воспринимать сложные тексты и создавать тексты высокой сложности.
+
+
+
+
+
+                    </p>
+                    <a href="#">Подробнее</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>

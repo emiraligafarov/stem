@@ -1,0 +1,254 @@
+
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Биология</title>
+    <style>
+        /* Стили для курсов */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #188e2b, #ffffff);
+            color: #000000;
+            height: 100vh; /* Устанавливаем высоту экрана */
+            display: flex; /* Используем flex для центрирования */
+            justify-content: center; /* Центрируем по горизонтали */
+            align-items: center; /* Центрируем по вертикали */
+        }
+
+        header {
+            text-align: center;
+            position: relative;
+            width: 100%; /* Занимает всю ширину экрана */
+            max-width: 800px; /* Ограничиваем ширину для красоты */
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            height: 200px; /* Толщина линии */
+            background: #2e5714;
+            transform: translateY(-50%);
+            z-index: -1; /* Линия на заднем плане */
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 48px;
+            letter-spacing: 1px;
+            color: white;
+            background: #38703a;
+            padding: 20px 40px;
+            display: inline-block;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        main {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .course-section {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .course {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            width: 320px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+        }
+
+        .course:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .course img {
+            width: 100px;
+            height: auto;
+            margin-bottom: 15px;
+            border-radius: 50%; /* Круглая форма логотипа */
+            border: 2px solid #ffffff;
+        }
+
+        .course h2 {
+            margin: 0 0 20px;
+            font-size: 26px;
+            color: #000000;
+            font-weight: 700;
+        }
+
+        .course ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .course ul li {
+            margin: 15px 0;
+        }
+
+        .course ul li a {
+            text-decoration: none;
+            color: #333;
+            font-size: 18px;
+            font-weight: 500;
+            padding: 8px 12px;
+            border: 2px solid #000000;
+            border-radius: 8px;
+            background: linear-gradient(90deg, #000000, #0056b3);
+            color: white;
+            display: inline-block;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+
+        .course ul li a:hover {
+            background: #000000;
+            color: #010101;
+            border-color: #000000;
+        }
+
+        .back-button {
+            display: bottom;
+            margin-top: 10px;
+            font-size: 18px;
+            color: #fefefe;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 8px 12px;
+            border: 2px solid #e6e6e6;
+            border-radius: 8px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .back-button:hover {
+            background-color: #26801b;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Биология</h1>
+        <a href="courses.html" class="back-button">← Назад к курсам</a>
+    </header>
+
+    <main>
+        <section>
+            <h2>Разделы биологии</h2>
+            <div class="course-section">
+                <div class="course">
+                    <h2>Клеточная биология</h2>
+                    <p>Изучение клеток, их структуры, функций и процессов, таких как клеточное деление, метаболизм и клеточное взаимодействие. Это основа для понимания всех живых организмов.</p>
+                    <a href="#">Подробнее</a>
+                </div>
+                <div class="course">
+                    <h2>Генетика</h2>
+                    <p>Исследование наследственности, генов и их роли в передаче признаков от поколения к поколению. Включает молекулярную генетику, геномные технологии и редактирование генов, например, с помощью CRISPR.</p>
+                    <a href="#">Подробнее</a>
+                </div>
+                <div class="course">
+                    <h2>Экология
+                    </h2>
+                    <p>Изучение взаимосвязей между живыми организмами и их окружением. Включает экосистемы, биомы, биосферу и влияние человеческой деятельности на природные ресурсы и климат.</p>
+                    <a href="#">Подробнее</a>
+                </div>
+                <div class="course">
+                    <h2>Физиология</h2>
+                    <p>Изучение нормальных функций живых организмов. Включает работу органов и систем, таких как нервная, дыхательная, пищеварительная, кровеносная системы, а также механизмы адаптации к условиям окружающей среды.</p>
+                    <a href="#">Подробнее</a>
+                
+                </div>
+                <div class="course">
+                    <h2>Эволюция</h2>
+                    <p>Изучение изменений в популяциях видов с течением времени. Охватывает теории Дарвина, естественный отбор, и современные исследования в области молекулярной эволюции и филогенетики.
+                    </p>
+                    <a href="#">Подробнее</a>
+
+                </div>
+                <div class="course">
+                    <h2>Микробиология</h2>
+                    <p> Исследование микроорганизмов, таких как бактерии, вирусы, грибы и простейшие. Включает как полезные, так и патогенные микроорганизмы, а также их роль в экосистемах и медицине.</p>
+                    <a href="#">Подробнее</a>
+
+                </div>
+                <div class="course">
+                    <h2>Биохимия</h2>
+                    <p>Изучение химических процессов, протекающих в живых организмах, включая метаболизм, синтез белков и ДНК, клеточную сигнализацию, а также роль ферментов и молекул, таких как АТФ.</p>
+                    <a href="#">Подробнее</a>
+
+                </div>
+                <div class="course">
+                    <h2>Биотехнология</h2>
+                    <p>Применение биологических процессов для разработки технологий, таких как генно-модифицированные организмы, ферментативные реакции и медицинские препараты. Включает создание вакцин, антибиотиков и устойчивых сельскохозяйственных культур.</p>
+                    <a href="#">Подробнее</a>
+
+                </div>
+                <div class="course">
+                    <h2>Микроскопия</h2>
+                    <p>Изучение структуры объектов, таких как клетки и микроорганизмы, с помощью различных типов микроскопов, включая световую, электронную и атомно-силовую микроскопию.</p>
+                    <a href="#">Подробнее</a>
+
+                </div>
+                <div class="course">
+                    <h2>Биофизика</h2>
+                    <p>Применение физических принципов для понимания биологических процессов. Включает исследования на молекулярном уровне, такие как структура белков, динамика молекул и взаимодействия между биомолекулами.</p>
+                    <a href="#">Подробнее</a>
+
+                </div>
+                <div class="course">
+                    <h2>Антропология</h2>
+                    <p> Изучение человека как биологического вида, его эволюции, анатомии, а также взаимодействия с окружающей средой и другими видами.</p>
+                    <a href="#">Подробнее</a>
+
+                </div>
+                <div class="course">
+                    <h2>Зоология</h2>
+                    <p>Исследование животных, их поведения, эволюции, физиологии и экологии. Включает как изучение отдельных видов, так и общие закономерности животного мира.</p>
+                    <a href="#">Подробнее</a>
+
+                </div>
+                <div class="course">
+                    <h2>Ботаника</h2>
+                    <p> Изучение растений, их строения, роста, репродукции и экологии. Включает как лесоведение и сельское хозяйство, так и молекулярную биологию растений и их адаптацию к окружающей среде.</p>
+                    <a href="#">Подробнее</a>
+
+                </div>
+                <div class="course">
+                    <h2>Палеонтология</h2>
+                    <p>Изучение ископаемых остатков древних организмов, что позволяет реконструировать историю жизни на Земле, эволюцию видов и условия их существования.</p>
+                    <a href="#">Подробнее</a>
+
+                </div>
+                <div class="course">
+                    <h2>Нейробиология</h2>
+                    <p>Исследование нервной системы, нейронов, нейротрансмиттеров и механизмы, управляющие поведением, ощущениями и когнитивными функциями.
+                    </p>
+                    <a href="#">Подробнее</a>
+
+    
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>
