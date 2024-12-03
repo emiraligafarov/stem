@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -12,7 +10,7 @@
             font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
-            background: linear-gradient(135deg, #202b5a, #ffffff);
+            background: linear-gradient(135deg, #51205a, #ffffff);
             color: #000000;
             height: 100vh; /* Устанавливаем высоту экрана */
             display: flex; /* Используем flex для центрирования */
@@ -34,7 +32,7 @@
             left: 0;
             width: 100%;
             height: 200px; /* Толщина линии */
-            background: #141b57;
+            background: #571446;
             transform: translateY(-50%);
             z-index: -1; /* Линия на заднем плане */
         }
@@ -44,7 +42,7 @@
             font-size: 48px;
             letter-spacing: 1px;
             color: white;
-            background: #385070;
+            background: #70386a;
             padding: 20px 40px;
             display: inline-block;
             border-radius: 12px;
@@ -80,14 +78,6 @@
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
         }
 
-        .course img {
-            width: 100px;
-            height: auto;
-            margin-bottom: 15px;
-            border-radius: 50%; /* Круглая форма логотипа */
-            border: 2px solid #ffffff;
-        }
-
         .course h2 {
             margin: 0 0 20px;
             font-size: 26px;
@@ -95,37 +85,33 @@
             font-weight: 700;
         }
 
-        .course ul {
-            list-style: none;
-            padding: 0;
+        .course p {
+            margin-bottom: 15px;
+            font-size: 16px;
+            line-height: 1.5;
         }
 
-        .course ul li {
-            margin: 15px 0;
-        }
-
-        .course ul li a {
+        .course a {
             text-decoration: none;
-            color: #333;
+            color: #ffffff;
             font-size: 18px;
             font-weight: 500;
             padding: 8px 12px;
             border: 2px solid #000000;
             border-radius: 8px;
-            background: linear-gradient(90deg, #000000, #0056b3);
-            color: white;
+            background: linear-gradient(90deg, #a800a8, #0056b3);
             display: inline-block;
             transition: background 0.3s ease, color 0.3s ease;
         }
 
-        .course ul li a:hover {
+        .course a:hover {
             background: #ffffff;
-            color: #007BFF;
-            border-color: #000000;
+            color: #0056b3;
+            border-color: #a800a8;
         }
 
         .back-button {
-            display: bottom;
+            display: inline-block;
             margin-top: 10px;
             font-size: 18px;
             color: #fefefe;
@@ -134,17 +120,17 @@
             padding: 8px 12px;
             border: 2px solid #e6e6e6;
             border-radius: 8px;
+            background-color: #70386a;
             transition: background-color 0.3s ease, color 0.3s ease;
         }
 
         .back-button:hover {
-            background-color: #184172;
+            background-color: #571446;
             color: white;
         }
     </style>
 </head>
 <body>
-
     <header>
         <h1>Физика</h1>
         <a href="courses.html" class="back-button">← Назад к курсам</a>
@@ -155,33 +141,42 @@
             <h2>Разделы физики</h2>
             <div class="course-section">
                 <div class="course">
-                    <h2>Механика</h2>
-                    <p>Изучайте законы движения и силы.</p>
-                    <a href="#">Подробнее</a>
-                </div>
-                <div class="course">
-                    <h2>Молекулярная физика</h2>
-                    <p>Исследуйте поведение частиц на микроскопическом уровне.</p>
+                    <h2>Классическая механика</h2>
+                    <p>Изучение законов движения тел, сил и энергии, а также их взаимодействия.</p>
                     <a href="#">Подробнее</a>
                 </div>
                 <div class="course">
                     <h2>Термодинамика</h2>
-                    <p>Изучайте теплоту и ее влияние на материю.</p>
+                    <p>Анализ тепловых процессов, энергии и энтропии.</p>
                     <a href="#">Подробнее</a>
                 </div>
                 <div class="course">
-                    <h2>Электричество</h2>
-                    <p>Исследуйте природу электрических явлений.</p>
+                    <h2>Электродинамика</h2>
+                    <p>Изучение электрических и магнитных полей, а также их взаимодействие.</p>
                     <a href="#">Подробнее</a>
                 </div>
                 <div class="course">
-                    <h2>Квантовая физика</h2>
-                    <p>Откройте мир микрочастиц и их странных свойств.</p>
+                    <h2>Оптика</h2>
+                    <p>Анализ света, его свойств и взаимодействия с веществом.</p>
+                    <a href="#">Подробнее</a>
+                </div>
+                <div class="course">
+                    <h2>Квантовая механика</h2>
+                    <p>Изучение микромира, квантовых состояний и явлений.</p>
+                    <a href="#">Подробнее</a>
+                </div>
+                <div class="course">
+                    <h2>Теория относительности</h2>
+                    <p>Изучение эффектов, возникающих при движении с высокой скоростью и в сильных гравитационных полях.</p>
+                    <a href="#">Подробнее</a>
+                </div>
+                <div class="course">
+                    <h2>Атомная физика</h2>
+                    <p>Исследование структуры атомов и их взаимодействий с электромагнитными волнами.</p>
                     <a href="#">Подробнее</a>
                 </div>
             </div>
         </section>
     </main>
-
 </body>
 </html>

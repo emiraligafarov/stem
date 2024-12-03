@@ -78,14 +78,6 @@
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
         }
 
-        .course img {
-            width: 100px;
-            height: auto;
-            margin-bottom: 15px;
-            border-radius: 50%; /* Круглая форма логотипа */
-            border: 2px solid #ffffff;
-        }
-
         .course h2 {
             margin: 0 0 20px;
             font-size: 26px;
@@ -93,37 +85,33 @@
             font-weight: 700;
         }
 
-        .course ul {
-            list-style: none;
-            padding: 0;
+        .course p {
+            margin-bottom: 15px;
+            font-size: 16px;
+            line-height: 1.5;
         }
 
-        .course ul li {
-            margin: 15px 0;
-        }
-
-        .course ul li a {
+        .course a {
             text-decoration: none;
-            color: #a02424;
+            color: #ffffff;
             font-size: 18px;
             font-weight: 500;
             padding: 8px 12px;
             border: 2px solid #000000;
             border-radius: 8px;
-            background: linear-gradient(90deg, #f80000, #0056b3);
-            color: white;
+            background: linear-gradient(90deg, #a800a8, #0056b3);
             display: inline-block;
             transition: background 0.3s ease, color 0.3s ease;
         }
 
-        .course ul li a:hover {
+        .course a:hover {
             background: #ffffff;
-            color: #007BFF;
-            border-color: #000000;
+            color: #0056b3;
+            border-color: #a800a8;
         }
 
         .back-button {
-            display: bottom;
+            display: inline-block;
             margin-top: 10px;
             font-size: 18px;
             color: #fefefe;
@@ -132,17 +120,17 @@
             padding: 8px 12px;
             border: 2px solid #e6e6e6;
             border-radius: 8px;
+            background-color: #70386a;
             transition: background-color 0.3s ease, color 0.3s ease;
         }
 
         .back-button:hover {
-            background-color: #721818;
+            background-color: #571446;
             color: white;
         }
     </style>
 </head>
 <body>
-
     <header>
         <h1>Математика</h1>
         <a href="courses.html" class="back-button">← Назад к курсам</a>
@@ -154,45 +142,36 @@
             <div class="course-section">
                 <div class="course">
                     <h2>Алгебра</h2>
-                    <p>Изучение операций с числами и переменными, решение уравнений и неравенств, а также работа с многочленами.</p>
+                    <p>Изучение операций с числами и переменными, решение уравнений и неравенств.</p>
                     <a href="#">Подробнее</a>
                 </div>
                 <div class="course">
                     <h2>Геометрия</h2>
-                    <p>Изучение свойств фигур, их взаимного расположения и пространственных соотношений.</p>
+                    <p>Изучение свойств фигур и пространственных соотношений.</p>
                     <a href="#">Подробнее</a>
                 </div>
                 <div class="course">
                     <h2>Тригонометрия</h2>
-                    <p>Изучение отношений между углами и сторонами треугольников, а также тригонометрических функций.</p>
+                    <p>Отношения между углами и сторонами треугольников.</p>
                     <a href="#">Подробнее</a>
                 </div>
                 <div class="course">
                     <h2>Функции</h2>
-                    <p>Анализ взаимосвязи между переменными, исследование свойств различных типов функций.</p>
+                    <p>Анализ взаимосвязи между переменными и типы функций.</p>
                     <a href="#">Подробнее</a>
                 </div>
                 <div class="course">
                     <h2>Теория вероятности</h2>
-                    <p>Изучение случайных событий, их вероятности и статистической обработки данных.</p>
+                    <p>Изучение случайных событий и статистической обработки данных.</p>
                     <a href="#">Подробнее</a>
-
-                </div>
-                <div class="course">
-                    <h2>Теория относительности</h2>
-                    <p>Изучение физических законов, связанных с движением и гравитацией, на больших скоростях и в сильных гравитационных полях.</p>
-                    <a href="#">Подробнее</a>
-
                 </div>
                 <div class="course">
                     <h2>Математический анализ</h2>
-                    <p>Исследование пределов, производных, интегралов и других понятий, связанных с изменением величин.</p>
+                    <p>Исследование пределов, производных и интегралов.</p>
                     <a href="#">Подробнее</a>
-
                 </div>
             </div>
         </section>
     </main>
-
 </body>
 </html>

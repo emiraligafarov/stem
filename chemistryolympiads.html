@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Химия - Олимпиады</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #51205a, #ffffff);
+            color: #000000;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            background: #70386a;
+            color: white;
+            width: 100%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+
+        header .back-button {
+            margin-top: 10px;
+            display: inline-block;
+            font-size: 18px;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 8px 12px;
+            border: 2px solid #e6e6e6;
+            border-radius: 8px;
+            background-color: transparent;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        header .back-button:hover {
+            background-color: white;
+            color: #70386a;
+        }
+
+        main {
+            padding: 40px 20px;
+            max-width: 1200px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .olympiads-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .olympiad {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            width: 300px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+        }
+
+        .olympiad:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .olympiad h2 {
+            font-size: 24px;
+            color: #51205a;
+            margin-bottom: 15px;
+        }
+
+        .olympiad p {
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .olympiad a {
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            padding: 10px 20px;
+            border-radius: 8px;
+            background: linear-gradient(90deg, #f80000, #0056b3);
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+
+        .olympiad a:hover {
+            background: white;
+            color: #70386a;
+            border: 2px solid #70386a;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Олимпиады по химии</h1>
+        <a href="olympiads.html" class="back-button">← Назад к олимпиадам</a>
+    </header>
+
+    <main>
+        <div class="olympiads-section">
+            <div class="olympiad">
+                <h2>Республиканская</h2>
+                <p>Финальный отбор Республики Узбекистан.</p>
+                <a href="#">Подробнее</a>
+            </div>
+            <div class="olympiad">
+                <h2>Областная олимпиада</h2>
+                <p>1-ый этап отбора.</p>
+                <a href="#">Подробнее</a>
+            </div>
+            <div class="olympiad">
+                <h2>Олимпиада Pagodane</h2>
+                <p>Казахстанская олимпиада</p>
+                <a href="#">Подробнее</a>
+            </div>
+            <div class="olympiad">
+                <h2>Районная</h2>
+                <p>Этап отбора</p>
+                <a href="#">Подробнее</a>
+            </div>
+            <div class="olympiad">
+                <h2>ICHO</h2>
+                <p>Международная олимпиада по химии. Одна из самых трудных</p>
+                <a href="#">Подробнее</a>
+            </div>
+            <div class="olympiad">
+                <h2>Юниорская</h2>
+                <p>Этап отбора</p>
+                <a href="#">Подробнее</a>
+            </div>
+            <div class="olympiad">
+                <h2>Казахстанские сборы</h2>
+                <p>Финальный этап отбора Республики Казахстан</p>
+                <a href="#">Подробнее</a>
+            </div>
+            <div class="olympiad">
+                <h2>Российские сборы</h2>
+                <p>Финальный этап отбора Российской Федерации.</p>
+                <a href="#">Подробнее</a>
+            </div>
+            <div class="olympiad">
+                <h2>Всероссийская олимпиада</h2>
+                <p>Этап отбора</p>
+                <a href="#">Подробнее</a>
+            </div>
+            <div class="olympiad">
+                <h2>Менделеевская олимпиада</h2>
+                <p>Самая трудная олимпиада в мире по версии UNESCO.</p>
+                <a href="#">Подробнее</a>
+            </div>
+            <div class="olympiad">
+                <h2>Беруни</h2>
+                <p>Международная олимпиада школьников по химии, проводимая Узбекистаном.</p>
+                <a href="#">Подробнее</a>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>
+
+    
+    
+    
+    
+    
+    
+
