@@ -1,139 +1,200 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Курсы</title>
-    <style>
-        /* Общие стили */
-        body {
-            font-family: 'Roboto', sans-serif;
-            margin: 0;
-            padding: 0;
-            background: linear-gradient(135deg, #3f51b5, #ffffff);
-            color: #000000;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-        }
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Курсы</title>
+   <style>
+       /* Общие стили */
+       body {
+           font-family: 'Roboto', sans-serif;
+           margin: 0;
+           padding: 0;
+           background: linear-gradient(135deg, #3f51b5, #ffffff);
+           color: #000000;
+           height: 100vh;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           flex-direction: column;
+       }
 
-        header {
-            text-align: center;
-            width: 100%;
-            max-width: 800px;
-        }
 
-        header h1 {
-            margin: 0;
-            font-size: 48px;
-            color: #ffffff;
-            background:  linear-gradient(90deg, #1e88e5, #43a047);
-            ;
-            ;
-            padding: 20px 40px;
-            border-radius: 12px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
+       header {
+           text-align: center;
+           width: 100%;
+           max-width: 800px;
+       }
 
-        main {
-            padding: 40px 20px;
-            max-width: 1200px;
-            margin: auto;
-            text-align: center;
-        }
 
-        .course-section {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 30px;
-        }
+       header h1 {
+           margin: 0;
+           font-size: 48px;
+           color: #ffffff;
+           background: linear-gradient(90deg, #1e88e5, #43a047);
+           padding: 20px 40px;
+           border-radius: 12px;
+           box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+       }
 
-        .course {
-            background: #ffffff;
-            border-radius: 12px;
-            padding: 20px;
-            width: 280px;
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            text-align: center;
-        }
 
-        .course:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-        }
+       main {
+           padding: 40px 20px;
+           max-width: 1200px;
+           margin: auto;
+           text-align: center;
+       }
 
-        .course h2 {
-            margin: 10px 0;
-            font-size: 24px;
-            color: #283593;
-            font-weight: 700;
-        }
 
-        .course p {
-            font-size: 16px;
-            color: #555555;
-            margin: 10px 0 20px;
-        }
+       .course-section {
+           display: flex;
+           justify-content: center;
+           flex-wrap: wrap;
+           gap: 30px;
+       }
 
-        .course a {
-            text-decoration: none;
-            font-size: 16px;
-            color: #ffffff;
-            background: linear-gradient(90deg, #1e88e5, #43a047);
-            padding: 10px 20px;
-            border-radius: 8px;
-            transition: background 0.3s ease, color 0.3s ease;
-        }
 
-        .course a:hover {
-            background: #43a047;
-            color: #e0f7fa;
-        }
-    </style>
+       .course {
+           background: #ffffff;
+           border-radius: 12px;
+           padding: 20px;
+           width: 280px;
+           box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+           transition: transform 0.3s ease, box-shadow 0.3s ease;
+           text-align: center;
+       }
+
+
+       .course:hover {
+           transform: translateY(-10px);
+           box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+       }
+
+
+       .course h2 {
+           margin: 10px 0;
+           font-size: 24px;
+           color: #283593;
+           font-weight: 700;
+       }
+
+
+       .course p {
+           font-size: 16px;
+           color: #555555;
+           margin: 10px 0 20px;
+       }
+
+
+       .course a {
+           text-decoration: none;
+           font-size: 16px;
+           color: #ffffff;
+           background: linear-gradient(90deg, #1e88e5, #43a047);
+           padding: 10px 20px;
+           border-radius: 8px;
+           transition: background 0.3s ease, color 0.3s ease;
+       }
+
+
+       .course a:hover {
+           background: #43a047;
+           color: #e0f7fa;
+       }
+
+
+       /* Кнопка "Назад на главную страницу" */
+       .back-button {
+           position: absolute;
+           top: 20px;
+           left: 20px;
+           background: linear-gradient(90deg, #43a047, #1e88e5);
+           color: #ffffff;
+           border: none;
+           padding: 10px 20px;
+           border-radius: 8px;
+           font-size: 16px;
+           cursor: pointer;
+           box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+           transition: background 0.3s ease, transform 0.2s ease;
+       }
+
+
+       .back-button:hover {
+           background: #1e88e5;
+           transform: scale(1.05);
+       }
+   </style>
 </head>
 <body>
 
+
+<!-- Кнопка "Назад на главную" -->
+<button class="back-button" onclick="location.href='index.html'">Назад на главную</button>
+
+
 <header>
-    <h1>Курсы</h1>
+   <h1>Курсы</h1>
 </header>
 
+
 <main>
-    <div class="course-section">
-        <div class="course">
-            <h2>Математика</h2>
-            <p>Изучайте математику с легкостью!</p>
-            <a href="math.html">Подробнее</a>
-        </div>
+   <div class="course-section">
+       <div class="course">
+           <h2>Математика</h2>
+           <p>Изучайте математику с легкостью!</p>
+           <a href="math.html">Подробнее</a>
+       </div>
 
-        <div class="course">
-            <h2>Физика</h2>
-            <p>Откройте мир физики и её законов.</p>
-            <a href="physics.html">Подробнее</a>
-        </div>
 
-        <div class="course">
-            <h2>Химия</h2>
-            <p>Исследуйте удивительный мир химии.</p>
-            <a href="chemistry.html">Подробнее</a>
-        </div>
+       <div class="course">
+           <h2>Физика</h2>
+           <p>Откройте мир физики и её законов.</p>
+           <a href="physics.html">Подробнее</a>
+       </div>
 
-        <div class="course">
-            <h2>Биология</h2>
-            <p>Исследуйте удивительный мир биологии.</p>
-            <a href="biology.html">Подробнее</a>
-        </div>
 
-        <div class="course">
-            <h2>Английский язык</h2>
-            <p>Узнайте больше об английском языке.</p>
-            <a href="english.html">Подробнее</a>
-        </div>
-    </div>
+       <div class="course">
+           <h2>Химия</h2>
+           <p>Исследуйте удивительный мир химии.</p>
+           <a href="chemistry.html">Подробнее</a>
+       </div>
+
+
+       <div class="course">
+           <h2>Биология</h2>
+           <p>Исследуйте удивительный мир биологии.</p>
+           <a href="biology.html">Подробнее</a>
+       </div>
+
+
+       <div class="course">
+           <h2>Английский язык</h2>
+           <p>Узнайте больше об английском языке.</p>
+           <a href="english.html">Подробнее</a>
+       </div>
+   </div>
 </main>
+
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

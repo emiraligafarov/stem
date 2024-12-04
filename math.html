@@ -1,177 +1,194 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Математика</title>
-    <style>
-        /* Стили для курсов */
-        body {
-            font-family: 'Roboto', sans-serif;
-            margin: 0;
-            padding: 0;
-            background: linear-gradient(135deg, #51205a, #ffffff);
-            color: #000000;
-            height: 100vh; /* Устанавливаем высоту экрана */
-            display: flex; /* Используем flex для центрирования */
-            justify-content: center; /* Центрируем по горизонтали */
-            align-items: center; /* Центрируем по вертикали */
-        }
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Математика</title>
+   <style>
+       /* Стили для страницы */
+       body {
+           font-family: 'Roboto', sans-serif;
+           margin: 0;
+           padding: 0;
+           background: linear-gradient(135deg, #51205a, #ffffff);
+           color: #000000;
+           height: 100vh;
+           display: flex;
+           flex-direction: column;
+           align-items: center;
+       }
 
-        header {
-            text-align: center;
-            position: relative;
-            width: 100%; /* Занимает всю ширину экрана */
-            max-width: 800px; /* Ограничиваем ширину для красоты */
-        }
 
-        header::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 0;
-            width: 100%;
-            height: 200px; /* Толщина линии */
-            background: #571446;
-            transform: translateY(-50%);
-            z-index: -1; /* Линия на заднем плане */
-        }
+       header {
+           text-align: center;
+           position: relative;
+           width: 100%;
+           padding: 20px;
+           background: #70386a;
+           color: #ffffff;
+       }
 
-        h1 {
-            margin: 0;
-            font-size: 48px;
-            letter-spacing: 1px;
-            color: white;
-            background: #70386a;
-            padding: 20px 40px;
-            display: inline-block;
-            border-radius: 12px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
 
-        main {
-            padding: 40px 20px;
-            max-width: 1200px;
-            margin: auto;
-            text-align: center;
-        }
+       header h1 {
+           font-size: 48px;
+           margin: 0;
+       }
 
-        .course-section {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 30px;
-        }
 
-        .course {
-            background: white;
-            border-radius: 12px;
-            padding: 25px;
-            width: 320px;
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            text-align: center;
-        }
+       .back-button {
+           display: inline-block;
+           margin-top: 10px;
+           font-size: 18px;
+           color: #ffffff;
+           text-decoration: none;
+           font-weight: bold;
+           padding: 8px 12px;
+           border: 2px solid #ffffff;
+           border-radius: 8px;
+           background-color: #571446;
+           transition: background-color 0.3s ease, color 0.3s ease;
+       }
 
-        .course:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-        }
 
-        .course h2 {
-            margin: 0 0 20px;
-            font-size: 26px;
-            color: #000000;
-            font-weight: 700;
-        }
+       .back-button:hover {
+           background-color: #ffffff;
+           color: #571446;
+       }
 
-        .course p {
-            margin-bottom: 15px;
-            font-size: 16px;
-            line-height: 1.5;
-        }
 
-        .course a {
-            text-decoration: none;
-            color: #ffffff;
-            font-size: 18px;
-            font-weight: 500;
-            padding: 8px 12px;
-            border: 2px solid #000000;
-            border-radius: 8px;
-            background: linear-gradient(90deg, #a800a8, #0056b3);
-            display: inline-block;
-            transition: background 0.3s ease, color 0.3s ease;
-        }
+       main {
+           padding: 20px;
+           text-align: center;
+       }
 
-        .course a:hover {
-            background: #ffffff;
-            color: #0056b3;
-            border-color: #a800a8;
-        }
 
-        .back-button {
-            display: inline-block;
-            margin-top: 10px;
-            font-size: 18px;
-            color: #fefefe;
-            text-decoration: none;
-            font-weight: bold;
-            padding: 8px 12px;
-            border: 2px solid #e6e6e6;
-            border-radius: 8px;
-            background-color: #70386a;
-            transition: background-color 0.3s ease, color 0.3s ease;
-        }
+       h2 {
+           font-size: 36px;
+           margin-bottom: 20px;
+           color: #51205a;
+       }
 
-        .back-button:hover {
-            background-color: #571446;
-            color: white;
-        }
-    </style>
+
+       .course-section {
+           display: flex;
+           flex-wrap: wrap;
+           justify-content: center;
+           gap: 20px;
+       }
+
+
+       .course {
+           background: linear-gradient(135deg, #ffffff, #f7e8ff);
+           border-radius: 12px;
+           padding: 20px;
+           width: 280px;
+           box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+           transition: transform 0.3s ease, box-shadow 0.3s ease;
+           text-align: center;
+           position: relative;
+           overflow: hidden;
+       }
+
+
+       .course:hover {
+           transform: translateY(-10px);
+           box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+       }
+
+
+       .course h3 {
+           margin: 10px 0;
+           font-size: 24px;
+           color: #70386a;
+       }
+
+
+       .course p {
+           font-size: 16px;
+           color: #555555;
+           margin: 10px 0 20px;
+       }
+
+
+       .course a {
+           text-decoration: none;
+           font-size: 16px;
+           color: #ffffff;
+           background: #70386a;
+           padding: 10px 20px;
+           border-radius: 8px;
+           transition: background 0.3s ease, color 0.3s ease;
+       }
+
+
+       .course a:hover {
+           background: #571446;
+       }
+
+
+       .course::before {
+           content: '';
+           position: absolute;
+           top: -50px;
+           right: -50px;
+           width: 150px;
+           height: 150px;
+           background: rgba(255, 255, 255, 0.2);
+           border-radius: 50%;
+           z-index: 0;
+       }
+
+
+       .course > * {
+           position: relative;
+           z-index: 1;
+       }
+   </style>
 </head>
 <body>
-    <header>
-        <h1>Математика</h1>
-        <a href="courses.html" class="back-button">← Назад к курсам</a>
-    </header>
+   <header>
+       <h1>Математика</h1>
+       <a href="courses.html" class="back-button">← Назад к курсам</a>
+   </header>
 
-    <main>
-        <section>
-            <h2>Разделы математики</h2>
-            <div class="course-section">
-                <div class="course">
-                    <h2>Алгебра</h2>
-                    <p>Изучение операций с числами и переменными, решение уравнений и неравенств.</p>
-                    <a href="#">Подробнее</a>
-                </div>
-                <div class="course">
-                    <h2>Геометрия</h2>
-                    <p>Изучение свойств фигур и пространственных соотношений.</p>
-                    <a href="#">Подробнее</a>
-                </div>
-                <div class="course">
-                    <h2>Тригонометрия</h2>
-                    <p>Отношения между углами и сторонами треугольников.</p>
-                    <a href="#">Подробнее</a>
-                </div>
-                <div class="course">
-                    <h2>Функции</h2>
-                    <p>Анализ взаимосвязи между переменными и типы функций.</p>
-                    <a href="#">Подробнее</a>
-                </div>
-                <div class="course">
-                    <h2>Теория вероятности</h2>
-                    <p>Изучение случайных событий и статистической обработки данных.</p>
-                    <a href="#">Подробнее</a>
-                </div>
-                <div class="course">
-                    <h2>Математический анализ</h2>
-                    <p>Исследование пределов, производных и интегралов.</p>
-                    <a href="#">Подробнее</a>
-                </div>
-            </div>
-        </section>
-    </main>
+
+   <main>
+       <h2>Разделы математики</h2>
+       <div class="course-section">
+           <div class="course">
+               <h3>Алгебра</h3>
+               <p>Изучение операций с числами и переменными, решение уравнений и неравенств.</p>
+               <a href="#">Подробнее</a>
+           </div>
+           <div class="course">
+               <h3>Геометрия</h3>
+               <p>Изучение свойств фигур и пространственных соотношений.</p>
+               <a href="#">Подробнее</a>
+           </div>
+           <div class="course">
+               <h3>Тригонометрия</h3>
+               <p>Отношения между углами и сторонами треугольников.</p>
+               <a href="#">Подробнее</a>
+           </div>
+           <div class="course">
+               <h3>Функции</h3>
+               <p>Анализ взаимосвязи между переменными и типы функций.</p>
+               <a href="#">Подробнее</a>
+           </div>
+           <div class="course">
+               <h3>Теория вероятности</h3>
+               <p>Изучение случайных событий и статистической обработки данных.</p>
+               <a href="#">Подробнее</a>
+           </div>
+           <div class="course">
+               <h3>Математический анализ</h3>
+               <p>Исследование пределов, производных и интегралов.</p>
+               <a href="#">Подробнее</a>
+           </div>
+       </div>
+   </main>
 </body>
 </html>
+
+
+

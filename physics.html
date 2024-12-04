@@ -1,182 +1,215 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Физика</title>
-    <style>
-        /* Стили для курсов */
-        body {
-            font-family: 'Roboto', sans-serif;
-            margin: 0;
-            padding: 0;
-            background: linear-gradient(135deg, #51205a, #ffffff);
-            color: #000000;
-            height: 100vh; /* Устанавливаем высоту экрана */
-            display: flex; /* Используем flex для центрирования */
-            justify-content: center; /* Центрируем по горизонтали */
-            align-items: center; /* Центрируем по вертикали */
-        }
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Фмзика</title>
+   <style>
+       /* Стили для страницы */
+       body {
+           font-family: 'Roboto', sans-serif;
+           margin: 0;
+           padding: 0;
+           background: linear-gradient(135deg, #51205a, #ffffff);
+           color: #000000;
+           height: 100vh;
+           display: flex;
+           flex-direction: column;
+           align-items: center;
+       }
 
-        header {
-            text-align: center;
-            position: relative;
-            width: 100%; /* Занимает всю ширину экрана */
-            max-width: 800px; /* Ограничиваем ширину для красоты */
-        }
 
-        header::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 0;
-            width: 100%;
-            height: 200px; /* Толщина линии */
-            background: #571446;
-            transform: translateY(-50%);
-            z-index: -1; /* Линия на заднем плане */
-        }
+       header {
+           text-align: center;
+           position: relative;
+           width: 100%;
+           padding: 20px;
+           background: #70386a;
+           color: #ffffff;
+       }
 
-        h1 {
-            margin: 0;
-            font-size: 48px;
-            letter-spacing: 1px;
-            color: white;
-            background: #70386a;
-            padding: 20px 40px;
-            display: inline-block;
-            border-radius: 12px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
 
-        main {
-            padding: 40px 20px;
-            max-width: 1200px;
-            margin: auto;
-            text-align: center;
-        }
+       header h1 {
+           font-size: 48px;
+           margin: 0;
+       }
 
-        .course-section {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 30px;
-        }
 
-        .course {
-            background: white;
-            border-radius: 12px;
-            padding: 25px;
-            width: 320px;
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            text-align: center;
-        }
+       .back-button {
+           display: inline-block;
+           margin-top: 10px;
+           font-size: 18px;
+           color: #ffffff;
+           text-decoration: none;
+           font-weight: bold;
+           padding: 8px 12px;
+           border: 2px solid #ffffff;
+           border-radius: 8px;
+           background-color: #571446;
+           transition: background-color 0.3s ease, color 0.3s ease;
+       }
 
-        .course:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-        }
 
-        .course h2 {
-            margin: 0 0 20px;
-            font-size: 26px;
-            color: #000000;
-            font-weight: 700;
-        }
+       .back-button:hover {
+           background-color: #ffffff;
+           color: #571446;
+       }
 
-        .course p {
-            margin-bottom: 15px;
-            font-size: 16px;
-            line-height: 1.5;
-        }
 
-        .course a {
-            text-decoration: none;
-            color: #ffffff;
-            font-size: 18px;
-            font-weight: 500;
-            padding: 8px 12px;
-            border: 2px solid #000000;
-            border-radius: 8px;
-            background: linear-gradient(90deg, #a800a8, #0056b3);
-            display: inline-block;
-            transition: background 0.3s ease, color 0.3s ease;
-        }
+       main {
+           padding: 20px;
+           text-align: center;
+       }
 
-        .course a:hover {
-            background: #ffffff;
-            color: #0056b3;
-            border-color: #a800a8;
-        }
 
-        .back-button {
-            display: inline-block;
-            margin-top: 10px;
-            font-size: 18px;
-            color: #fefefe;
-            text-decoration: none;
-            font-weight: bold;
-            padding: 8px 12px;
-            border: 2px solid #e6e6e6;
-            border-radius: 8px;
-            background-color: #70386a;
-            transition: background-color 0.3s ease, color 0.3s ease;
-        }
+       h2 {
+           font-size: 36px;
+           margin-bottom: 20px;
+           color: #51205a;
+       }
 
-        .back-button:hover {
-            background-color: #571446;
-            color: white;
-        }
-    </style>
+
+       .course-section {
+           display: flex;
+           flex-wrap: wrap;
+           justify-content: center;
+           gap: 20px;
+       }
+
+
+       .course {
+           background: linear-gradient(135deg, #ffffff, #f7e8ff);
+           border-radius: 12px;
+           padding: 20px;
+           width: 280px;
+           box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+           transition: transform 0.3s ease, box-shadow 0.3s ease;
+           text-align: center;
+           position: relative;
+           overflow: hidden;
+       }
+
+
+       .course:hover {
+           transform: translateY(-10px);
+           box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+       }
+
+
+       .course h3 {
+           margin: 10px 0;
+           font-size: 24px;
+           color: #70386a;
+       }
+
+
+       .course p {
+           font-size: 16px;
+           color: #555555;
+           margin: 10px 0 20px;
+       }
+
+
+       .course a {
+           text-decoration: none;
+           font-size: 16px;
+           color: #ffffff;
+           background: #70386a;
+           padding: 10px 20px;
+           border-radius: 8px;
+           transition: background 0.3s ease, color 0.3s ease;
+       }
+
+
+       .course a:hover {
+           background: #571446;
+       }
+
+
+       .course::before {
+           content: '';
+           position: absolute;
+           top: -50px;
+           right: -50px;
+           width: 150px;
+           height: 150px;
+           background: rgba(255, 255, 255, 0.2);
+           border-radius: 50%;
+           z-index: 0;
+       }
+
+
+       .course > * {
+           position: relative;
+           z-index: 1;
+       }
+   </style>
 </head>
 <body>
-    <header>
-        <h1>Физика</h1>
-        <a href="courses.html" class="back-button">← Назад к курсам</a>
-    </header>
+   <header>
+       <h1>Физика</h1>
+       <a href="courses.html" class="back-button">← Назад к курсам</a>
+   </header>
 
-    <main>
-        <section>
-            <h2>Разделы физики</h2>
-            <div class="course-section">
-                <div class="course">
-                    <h2>Классическая механика</h2>
-                    <p>Изучение законов движения тел, сил и энергии, а также их взаимодействия.</p>
-                    <a href="#">Подробнее</a>
-                </div>
-                <div class="course">
-                    <h2>Термодинамика</h2>
-                    <p>Анализ тепловых процессов, энергии и энтропии.</p>
-                    <a href="#">Подробнее</a>
-                </div>
-                <div class="course">
-                    <h2>Электродинамика</h2>
-                    <p>Изучение электрических и магнитных полей, а также их взаимодействие.</p>
-                    <a href="#">Подробнее</a>
-                </div>
-                <div class="course">
-                    <h2>Оптика</h2>
-                    <p>Анализ света, его свойств и взаимодействия с веществом.</p>
-                    <a href="#">Подробнее</a>
-                </div>
-                <div class="course">
-                    <h2>Квантовая механика</h2>
-                    <p>Изучение микромира, квантовых состояний и явлений.</p>
-                    <a href="#">Подробнее</a>
-                </div>
-                <div class="course">
-                    <h2>Теория относительности</h2>
-                    <p>Изучение эффектов, возникающих при движении с высокой скоростью и в сильных гравитационных полях.</p>
-                    <a href="#">Подробнее</a>
-                </div>
-                <div class="course">
-                    <h2>Атомная физика</h2>
-                    <p>Исследование структуры атомов и их взаимодействий с электромагнитными волнами.</p>
-                    <a href="#">Подробнее</a>
-                </div>
-            </div>
-        </section>
-    </main>
+
+   <main>
+       <h2>Разделы физики</h2>
+       <div class="course-section">
+           <div class="course">
+               <h3>Классическая механика</h3>
+               <p>Изучение законов движения тел, сил и энергии, а также их взаимодействия.</p>
+               <a href="#">Подробнее</a>
+           </div>
+           <div class="course">
+               <h3>Термодинамика</h3>
+               <p>Анализ тепловых процессов, энергии и энтропии.</p>
+               <a href="#">Подробнее</a>
+           </div>
+           <div class="course">
+               <h3>Электродинамика</h3>
+               <p>Изучение электрических и магнитных полей, а также их взаимодействия.</p>
+               <a href="#">Подробнее</a>
+           </div>
+           <div class="course">
+               <h3>Оптика</h3>
+               <p>Анализ света, его свойств и взаимодействия с веществом.</p>
+               <a href="#">Подробнее</a>
+           </div>
+           <div class="course">
+               <h3>Квантовая механикаh</h3>
+               <p>Изучение микромира, квантовых состояний и явлений.</p>
+               <a href="#">Подробнее</a>
+           </div>
+           <div class="course">
+               <h3>Теория относительности</h3>
+               <p>Изучение эффектов, возникающих при движении с высокой скоростью и в сильных гравитационных полях.</p>
+               <a href="#">Подробнее</a>
+
+
+           </div>
+           <div class="course">
+               <h3>Атомная физика</h3>
+               <p>Исследование структуры атомов и их взаимодействий с электромагнитными волнами.</p>
+               <a href="#">Подробнее</a>
+           </div>
+       </div>
+   </main>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

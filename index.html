@@ -1,458 +1,550 @@
+
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <meta name="description" content="STEM Platform providing free access to STEM subject courses and Olympiad materials.">
-   <title>STEM Platform</title>
-   <link rel="stylesheet" href="styles.css">
-   <style>
-       /* Общие стили */
-       body {
-           font-family: 'Roboto', sans-serif;
-           margin: 0;
-           padding: 0;
-           background-color: #f7f9fc;
-           color: #451313;
-       }
-
-
-       /* Стили для заголовка */
-       header {
-           text-align: center;
-           padding: 40px 20px;
-           background-color: #650c0c;
-           color: white;
-           box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-       }
-
-
-       .main-title {
-           font-size: 3.5em;
-           font-weight: bold;
-           margin: 0;
-       }
-
-
-       .welcome-text {
-           font-size: 1.5em;
-           margin-top: 10px;
-       }
-
-    /* Стили для языка */
-    .language-selector {
-           position: left
-           ;
-           top: 20px;
-           right: 20px;
-           background-color: rgb(255, 255, 255);
-           padding: 10px;
-           border-radius: 5px;
-           box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
-       }
-
-
-       select {
-           font-size: 1em;
-           padding: 5px;
-           border: 1px solid #000000;
-           border-radius: 5px;
-       }
-
-
-       select {
-           font-size: 1em;
-           padding: 5px;
-           border: 1px solid #000000;
-           border-radius: 5px;
-       }
-
-
-       .grid-container {
-           display: grid;
-           grid-template-columns: repeat(4, 1fr);
-           grid-gap: 20px;
-           padding: 20px 20px;
-           max-width: 1200px;
-           margin: 0 auto;
-           margin-top: 40px;
-           justify-items: start;
-       }
-
-
-       @media (max-width: 768px) {
-           .grid-container {
-               grid-template-columns: 1fr 1fr;
-           }
-       }
-
-
-       .grid-item {
-           background-color: #ffffff;
-           border-radius: 12px;
-           padding: 25px;
-           text-align: center;
-           box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-           transition: transform 0.3s ease, box-shadow 0.3s ease;
-           cursor: pointer;
-           border: 1px solid #e1e9f0;
-       }
-
-
-       .grid-item:hover {
-           transform: translateY(-8px);
-           box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-       }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="STEM Platform providing free access to STEM subject courses and Olympiad materials.">
+  <title>STEM Platform</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+      /* Общие стили */
+      body {
+          font-family: 'Roboto', sans-serif;
+          margin: 0;
+          padding: 0;
+          background-color: #f7f9fc;
+          color: #451313;
+      }
 
 
-       .grid-item h2 {
-           font-size: 1.6em;
-           color: #000000;
-       }
 
 
-       .grid-item p {
-           font-size: 1.2em;
-           color: #7f8c8d;
-       }
+      /* Стили для заголовка */
+      header {
+          text-align: center;
+          padding: 40px 20px;
+          background-color: #650c0c;
+          color: white;
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      }
 
 
-       .grid-item a {
-           text-decoration: none;
-           color: inherit;
-       }
 
 
-       .grid-item a:hover {
-           color: #350b0b;
-       }
+      .main-title {
+          font-size: 3.5em;
+          font-weight: bold;
+          margin: 0;
+      }
 
 
-       /* Стили для формы логина и регистрации */
-       .form-container {
-           position: absolute; 
-           
-        
-        ;
-           top: 20px;
-           right: 20px;
-           width: 300px;
-           background-color: #ffffff;
-           padding: 20px;
-           border-radius: 10px;
-           box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-           z-index: 1000;
-           transition: transform 0.3s ease-in-out;
-       }
 
 
-       .form-container h2 {
-           font-size: 1.8em;
-           margin-bottom: 20px;
-           color: #350b0b;
-       }
+      .welcome-text {
+          font-size: 1.5em;
+          margin-top: 10px;
+      }
 
 
-       .form-group {
-           margin-bottom: 15px;
-       }
+   /* Стили для языка */
+   .language-selector {
+          position: left
+          ;
+          top: 20px;
+          right: 20px;
+          background-color: rgb(255, 255, 255);
+          padding: 10px;
+          border-radius: 5px;
+          box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+      }
 
 
-       label {
-           font-size: 1.1em;
-           display: block;
-           margin-bottom: 5px;
-           color: #34495e;
-       }
 
 
-       input[type="text"], input[type="password"], input[type="email"], input[type="tel"] {
-           width: 100%;
-           padding: 10px;
-           font-size: 1.1em;
-           border: 1px solid #ddd;
-           border-radius: 5px;
-           box-sizing: border-box;
-       }
+      select {
+          font-size: 1em;
+          padding: 5px;
+          border: 1px solid #000000;
+          border-radius: 5px;
+      }
 
 
-       button {
-           width: 100%;
-           padding: 12px;
-           font-size: 1.2em;
-           background-color: #350b0b;
-           color: white;
-           border: none;
-           border-radius: 5px;
-           cursor: pointer;
-           transition: background-color 0.3s;
-       }
 
 
-       button:hover {
-           background-color: #350b0b;
-       }
+      select {
+          font-size: 1em;
+          padding: 5px;
+          border: 1px solid #000000;
+          border-radius: 5px;
+      }
 
 
-       .switch-container {
-           display: flex;
-           justify-content: space-between;
-           align-items: center;
-           margin-bottom: 20px;
-       }
 
 
-       .switch-container label {
-           font-size: 1.2em;
-       }
+      .grid-container {
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          grid-gap: 20px;
+          padding: 20px 20px;
+          max-width: 1200px;
+          margin: 0 auto;
+          margin-top: 40px;
+          justify-items: start;
+      }
 
 
-       .switch input {
-           display: none;
-       }
 
 
-       .switch .slider {
-           position: relative;
-           display: inline-block;
-           width: 34px;
-           height: 20px;
-           background-color: #350b0b;
-           border-radius: 50px;
-           transition: 0.4s;
-       }
+      @media (max-width: 768px) {
+          .grid-container {
+              grid-template-columns: 1fr 1fr;
+          }
+      }
 
 
-       .switch .slider:before {
-           content: "";
-           position: absolute;
-           left: 4px;
-           top: 4px;
-           width: 12px;
-           height: 12px;
-           background-color: white;
-           border-radius: 50%;
-           transition: 0.4s;
-       }
 
 
-       .switch input:checked + .slider {
-           background-color: #3498db;
-       }
+      .grid-item {
+          background-color: #ffffff;
+          border-radius: 12px;
+          padding: 25px;
+          text-align: center;
+          box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+          cursor: pointer;
+          border: 1px solid #e1e9f0;
+      }
 
 
-       .switch input:checked + .slider:before {
-           transform: translateX(14px);
-       }
 
 
-       form {
-           display: none;
-       }
+      .grid-item:hover {
+          transform: translateY(-8px);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      }
 
 
-       form.active {
-           display: block;
-       }
 
 
-       .form-container {
-           transition: transform 0.3s ease-in-out;
-       }
+      .grid-item h2 {
+          font-size: 1.6em;
+          color: #000000;
+      }
 
 
-       .form-container.fixed {
-           position: fixed;
-           top: 20px;
-           right: 20px;
-       }
 
 
-       @media (max-width: 768px) {
-           .grid-container {
-               grid-template-columns: 1fr;
-           }
-       }
-   </style>
+      .grid-item p {
+          font-size: 1.2em;
+          color: #7f8c8d;
+      }
+
+
+
+
+      .grid-item a {
+          text-decoration: none;
+          color: inherit;
+      }
+
+
+
+
+      .grid-item a:hover {
+          color: #350b0b;
+      }
+
+
+
+
+      /* Стили для формы логина и регистрации */
+      .form-container {
+          position: absolute;
+         
+      
+       ;
+          top: 20px;
+          right: 20px;
+          width: 300px;
+          background-color: #ffffff;
+          padding: 20px;
+          border-radius: 10px;
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+          z-index: 1000;
+          transition: transform 0.3s ease-in-out;
+      }
+
+
+
+
+      .form-container h2 {
+          font-size: 1.8em;
+          margin-bottom: 20px;
+          color: #350b0b;
+      }
+
+
+
+
+      .form-group {
+          margin-bottom: 15px;
+      }
+
+
+
+
+      label {
+          font-size: 1.1em;
+          display: block;
+          margin-bottom: 5px;
+          color: #34495e;
+      }
+
+
+
+
+      input[type="text"], input[type="password"], input[type="email"], input[type="tel"] {
+          width: 100%;
+          padding: 10px;
+          font-size: 1.1em;
+          border: 1px solid #ddd;
+          border-radius: 5px;
+          box-sizing: border-box;
+      }
+
+
+
+
+      button {
+          width: 100%;
+          padding: 12px;
+          font-size: 1.2em;
+          background-color: #350b0b;
+          color: white;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+          transition: background-color 0.3s;
+      }
+
+
+
+
+      button:hover {
+          background-color: #350b0b;
+      }
+
+
+
+
+      .switch-container {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: 20px;
+      }
+
+
+
+
+      .switch-container label {
+          font-size: 1.2em;
+      }
+
+
+
+
+      .switch input {
+          display: none;
+      }
+
+
+
+
+      .switch .slider {
+          position: relative;
+          display: inline-block;
+          width: 34px;
+          height: 20px;
+          background-color: #350b0b;
+          border-radius: 50px;
+          transition: 0.4s;
+      }
+
+
+
+
+      .switch .slider:before {
+          content: "";
+          position: absolute;
+          left: 4px;
+          top: 4px;
+          width: 12px;
+          height: 12px;
+          background-color: white;
+          border-radius: 50%;
+          transition: 0.4s;
+      }
+
+
+
+
+      .switch input:checked + .slider {
+          background-color: #3498db;
+      }
+
+
+
+
+      .switch input:checked + .slider:before {
+          transform: translateX(14px);
+      }
+
+
+
+
+      form {
+          display: none;
+      }
+
+
+
+
+      form.active {
+          display: block;
+      }
+
+
+
+
+      .form-container {
+          transition: transform 0.3s ease-in-out;
+      }
+
+
+
+
+      .form-container.fixed {
+          position: fixed;
+          top: 20px;
+          right: 20px;
+      }
+
+
+
+
+      @media (max-width: 768px) {
+          .grid-container {
+              grid-template-columns: 1fr;
+          }
+      }
+  </style>
 </head>
 <body>
 
 
-   <!-- Язык -->
-   <div class="language-selector">
-       <select id="language-selector" onchange="changeLanguage(event)">
-           <option value="ru">Русский</option>
-           <option value="uz">O'zbekcha</option>
-           <option value="en">English</option>
-       </select>
-   </div>
 
 
-   <!-- Заголовок -->
-   <header>
-       <h1 class="main-title" id="title">STEM Platform</h1>
-       <p class="welcome-text" id="welcome-text">Добро пожаловать на STEM платформу</p>
-   </header>
+  <!-- Язык -->
+  <div class="language-selector">
+      <select id="language-selector" onchange="changeLanguage(event)">
+          <option value="ru">Русский</option>
+          <option value="uz">O'zbekcha</option>
+          <option value="en">English</option>
+      </select>
+  </div>
 
 
-   <!-- Сетка с 8 квадратиками -->
-   <div class="grid-container">
-       <div class="grid-item" id="welcome">
-           <a href="welcome.html">
-               <h2 id="welcome-heading">Добро пожаловать на STEM платформу</h2>
-               <p id="welcome-description">Мы рады приветствовать вас на нашей платформе, которая предоставляет бесплатный доступ к урокам и объяснениям по STEM предметам.</p>
-           </a>
-       </div>
 
 
-       <div class="grid-item" id="team">
-           <a href="team.html">
-               <h2 id="team-heading">Наша команда</h2>
-               <p id="team-description">Мы — группа экспертов, которые создали платформу для распространения знаний в области науки, технологий, инженерии и математики.</p>
-           </a>
-       </div>
+  <!-- Заголовок -->
+  <header>
+      <h1 class="main-title" id="title">STEM Platform</h1>
+      <p class="welcome-text" id="welcome-text">Добро пожаловать на STEM платформу</p>
+  </header>
 
 
-       <div class="grid-item" id="about">
-           <a href="about.html">
-               <h2 id="about-heading">О нас</h2>
-               <p id="about-description">Наша цель — сделать образование доступным для всех. Мы стремимся предоставить бесплатные ресурсы и поддержку студентам по всему миру.</p>
-           </a>
-       </div>
 
 
-       <div class="grid-item" id="courses">
-           <a href="courses.html">
-               <h2 id="courses-heading">Курсы</h2>
-               <p id="courses-description">На нашей платформе вы найдете курсы по самым актуальным STEM предметам.</p>
-           </a>
-       </div>
+  <!-- Сетка с 8 квадратиками -->
+  <div class="grid-container">
+      <div class="grid-item" id="welcome">
+          <a href="welcome.html">
+              <h2 id="welcome-heading">Добро пожаловать на STEM платформу</h2>
+              <p id="welcome-description">Мы рады приветствовать вас на нашей платформе, которая предоставляет бесплатный доступ к урокам и объяснениям по STEM предметам.</p>
+          </a>
+      </div>
 
 
-       <div class="grid-item" id="olympiads">
-           <a href="olympiads.html">
-               <h2 id="olympiads-heading">Олимпиады</h2>
-               <p id="olympiads-description">Мы также предлагаем материалы для подготовки к различным научным олимпиадам.</p>
-           </a>
-       </div>
 
 
-       <div class="grid-item" id="research">
-           <a href="research.html">
-               <h2 id="research-heading">Исследования</h2>
-               <p id="research-description">Мы поддерживаем научные исследования и поощряем студентов к участию в научных проектах.</p>
-           </a>
-       </div>
+      <div class="grid-item" id="team">
+          <a href="team.html">
+              <h2 id="team-heading">Наша команда</h2>
+              <p id="team-description">Мы — группа экспертов, которые создали платформу для распространения знаний в области науки, технологий, инженерии и математики.</p>
+          </a>
+      </div>
 
 
-       <div class="grid-item" id="contact">
-           <a href="contact.html">
-               <h2 id="contact-heading">Контакты</h2>
-               <p id="contact-description">Свяжитесь с нами для получения дополнительной информации или помощи.</p>
-           </a>
-       </div>
 
 
-       <div class="grid-item" id="events">
-           <a href="events.html">
-               <h2 id="events-heading">События</h2>
-               <p id="events-description">Узнайте о наших ближайших событиях и проектах, которые помогут вам развиваться в STEM областях.</p>
-           </a>
-       </div>
-   </div>
+      <div class="grid-item" id="about">
+          <a href="about.html">
+              <h2 id="about-heading">О нас</h2>
+              <p id="about-description">Наша цель — сделать образование доступным для всех. Мы стремимся предоставить бесплатные ресурсы и поддержку студентам по всему миру.</p>
+          </a>
+      </div>
 
 
-   <script>
-       function changeLanguage(event) {
-           const lang = event.target.value;
 
 
-           // Пример переключения языков на платформе
-           const texts = {
-               "ru": {
-                   "title": "STEM платформа",
-                   "welcome-text": "Добро пожаловать на STEM платформу",
-                   "welcome-heading": "Добро пожаловать на STEM платформу",
-                   "welcome-description": "Мы рады приветствовать вас на нашей платформе, которая предоставляет бесплатный доступ к урокам и объяснениям по STEM предметам.",
-                   "team-heading": "Наша команда",
-                   "team-description": "Мы — группа экспертов, которые создали платформу для распространения знаний в области науки, технологий, инженерии и математики.",
-                   "about-heading": "О нас",
-                   "about-description": "Наша цель — сделать образование доступным для всех. Мы стремимся предоставить бесплатные ресурсы и поддержку студентам по всему миру.",
-                   "courses-heading": "Курсы",
-                   "courses-description": "На нашей платформе вы найдете курсы по самым актуальным STEM предметам.",
-                   "olympiads-heading": "Олимпиады",
-                   "olympiads-description": "Мы также предлагаем материалы для подготовки к различным научным олимпиадам.",
-                   "research-heading": "Исследования",
-                   "research-description": "Мы поддерживаем научные исследования и поощряем студентов к участию в научных проектах.",
-                   "contact-heading": "Контакты",
-                   "contact-description": "Свяжитесь с нами для получения дополнительной информации или помощи.",
-                   "events-heading": "События",
-                   "events-description": "Узнайте о наших ближайших событиях и проектах, которые помогут вам развиваться в STEM областях"
-               },
-               "uz": {
-                   "title": "STEM Platformasi",
-                   "welcome-text": "STEM platformasiga xush kelibsiz",
-                   "welcome-heading": "STEM platformasiga xush kelibsiz",
-                   "welcome-description": "Biz sizni STEM fanlari bo'yicha bepul darslar va tushuntirishlarni taqdim etadigan platformada kutib olishdan mamnunmiz.",
-                   "team-heading": "Jamoamiz",
-                   "team-description": "Biz STEM sohalarida bilim tarqatish uchun platforma yaratgan mutaxassislar guruhimiz.",
-                   "about-heading": "Biz haqimizda",
-                   "about-description": "Bizning maqsadimiz ta'limni har kim uchun mavjud qilish. Biz dunyo bo'ylab talabalar uchun bepul resurslar va yordam taqdim etishga intilamiz.",
-                   "courses-heading": "Kurslar",
-                   "courses-description": "Bizning platformada siz eng dolzarb STEM fanlari bo'yicha kurslar topasiz.",
-                   "olympiads-heading": "Olmpiadalar",
-                   "olympiads-description": "Biz shuningdek turli ilmiy olimpiadalarga tayyorgarlik ko'rish uchun materiallar taklif qilamiz.",
-                   "research-heading": "Tadqiqotlar",
-                   "research-description": "Biz ilmiy tadqiqotlarni qo'llab-quvvatlaymiz va talabalarni ilmiy loyihalarda ishtirok etishga undaymiz.",
-                   "contact-heading": "Aloqa",
-                   "contact-description": "Qo'shimcha ma'lumot yoki yordam olish uchun biz bilan bog'laning.",
-                   "events-heading": "Tadbirlar",
-                   "events-description": "Bizning yaqin orada bo'lib o'tadigan tadbirlarimiz haqida bilib oling va STEM sohalarida rivojlanishingizga yordam beradi."
-               },
-               "en": {
-                   "title": "STEM Platform",
-                   "welcome-text": "Welcome to the STEM platform",
-                   "welcome-heading": "Welcome to the STEM platform",
-                   "welcome-description": "We are pleased to welcome you to our platform, providing free access to lessons and explanations in STEM subjects.",
-                   "team-heading": "Our Team",
-                   "team-description": "We are a group of experts who created a platform for disseminating knowledge in science, technology, engineering, and mathematics.",
-                   "about-heading": "About Us",
-                   "about-description": "Our goal is to make education accessible for all. We aim to provide free resources and support to students around the world.",
-                   "courses-heading": "Courses",
-                   "courses-description": "On our platform, you will find courses on the most relevant STEM subjects.",
-                   "olympiads-heading": "Olympiads",
-                   "olympiads-description": "We also offer materials for preparing for various scientific olympiads.",
-                   "research-heading": "Research",
-                   "research-description": "We support scientific research and encourage students to participate in scientific projects.",
-                   "contact-heading": "Contact Us",
-                   "contact-description": "Contact us for further information or assistance.",
-                   "events-heading": "Events",
-                   "events-description": "Find out about our upcoming events and projects that will help you develop in STEM fields."
-               }
-           };
+      <div class="grid-item" id="courses">
+          <a href="courses.html">
+              <h2 id="courses-heading">Курсы</h2>
+              <p id="courses-description">На нашей платформе вы найдете курсы по самым актуальным STEM предметам.</p>
+          </a>
+      </div>
 
 
-           // Обновить текст на странице в зависимости от выбранного языка
-           document.getElementById('title').textContent = texts[lang].title;
-           document.getElementById('welcome-text').textContent = texts[lang]['welcome-text'];
-           document.getElementById('welcome-heading').textContent = texts[lang]['welcome-heading'];
-           document.getElementById('welcome-description').textContent = texts[lang]['welcome-description'];
-           document.getElementById('team-heading').textContent = texts[lang]['team-heading'];
-           document.getElementById('team-description').textContent = texts[lang]['team-description'];
-           document.getElementById('about-heading').textContent = texts[lang]['about-heading'];
-           document.getElementById('about-description').textContent = texts[lang]['about-description'];
-           document.getElementById('courses-heading').textContent = texts[lang]['courses-heading'];
-           document.getElementById('courses-description').textContent = texts[lang]['courses-description'];
-           document.getElementById('olympiads-heading').textContent = texts[lang]['olympiads-heading'];
-           document.getElementById('olympiads-description').textContent = texts[lang]['olympiads-description'];
-           document.getElementById('research-heading').textContent = texts[lang]['research-heading'];
-           document.getElementById('research-description').textContent = texts[lang]['research-description'];
-           document.getElementById('contact-heading').textContent = texts[lang]['contact-heading'];
-           document.getElementById('contact-description').textContent = texts[lang]['contact-description'];
-           document.getElementById('events-heading').textContent = texts[lang]['events-heading'];
-           document.getElementById('events-description').textContent = texts[lang]['events-description'];
-       }
-   </script>
+
+
+      <div class="grid-item" id="olympiads">
+          <a href="olympiads.html">
+              <h2 id="olympiads-heading">Олимпиады</h2>
+              <p id="olympiads-description">Мы также предлагаем материалы для подготовки к различным научным олимпиадам.</p>
+          </a>
+      </div>
+
+
+
+
+      <div class="grid-item" id="research">
+          <a href="research.html">
+              <h2 id="research-heading">Исследования</h2>
+              <p id="research-description">Мы поддерживаем научные исследования и поощряем студентов к участию в научных проектах.</p>
+          </a>
+      </div>
+
+
+
+
+      <div class="grid-item" id="contact">
+          <a href="contact.html">
+              <h2 id="contact-heading">Контакты</h2>
+              <p id="contact-description">Свяжитесь с нами для получения дополнительной информации или помощи.</p>
+          </a>
+      </div>
+
+
+
+
+      <div class="grid-item" id="events">
+          <a href="events.html">
+              <h2 id="events-heading">События</h2>
+              <p id="events-description">Узнайте о наших ближайших событиях и проектах, которые помогут вам развиваться в STEM областях.</p>
+          </a>
+      </div>
+  </div>
+
+
+
+
+  <script>
+      function changeLanguage(event) {
+          const lang = event.target.value;
+
+
+
+
+          // Пример переключения языков на платформе
+          const texts = {
+              "ru": {
+                  "title": "STEM платформа",
+                  "welcome-text": "Добро пожаловать на STEM платформу",
+                  "welcome-heading": "Добро пожаловать на STEM платформу",
+                  "welcome-description": "Мы рады приветствовать вас на нашей платформе, которая предоставляет бесплатный доступ к урокам и объяснениям по STEM предметам.",
+                  "team-heading": "Наша команда",
+                  "team-description": "Мы — группа экспертов, которые создали платформу для распространения знаний в области науки, технологий, инженерии и математики.",
+                  "about-heading": "О нас",
+                  "about-description": "Наша цель — сделать образование доступным для всех. Мы стремимся предоставить бесплатные ресурсы и поддержку студентам по всему миру.",
+                  "courses-heading": "Курсы",
+                  "courses-description": "На нашей платформе вы найдете курсы по самым актуальным STEM предметам.",
+                  "olympiads-heading": "Олимпиады",
+                  "olympiads-description": "Мы также предлагаем материалы для подготовки к различным научным олимпиадам.",
+                  "research-heading": "Исследования",
+                  "research-description": "Мы поддерживаем научные исследования и поощряем студентов к участию в научных проектах.",
+                  "contact-heading": "Контакты",
+                  "contact-description": "Свяжитесь с нами для получения дополнительной информации или помощи.",
+                  "events-heading": "События",
+                  "events-description": "Узнайте о наших ближайших событиях и проектах, которые помогут вам развиваться в STEM областях"
+              },
+              "uz": {
+                  "title": "STEM Platformasi",
+                  "welcome-text": "STEM platformasiga xush kelibsiz",
+                  "welcome-heading": "STEM platformasiga xush kelibsiz",
+                  "welcome-description": "Biz sizni STEM fanlari bo'yicha bepul darslar va tushuntirishlarni taqdim etadigan platformada kutib olishdan mamnunmiz.",
+                  "team-heading": "Jamoamiz",
+                  "team-description": "Biz STEM sohalarida bilim tarqatish uchun platforma yaratgan mutaxassislar guruhimiz.",
+                  "about-heading": "Biz haqimizda",
+                  "about-description": "Bizning maqsadimiz ta'limni har kim uchun mavjud qilish. Biz dunyo bo'ylab talabalar uchun bepul resurslar va yordam taqdim etishga intilamiz.",
+                  "courses-heading": "Kurslar",
+                  "courses-description": "Bizning platformada siz eng dolzarb STEM fanlari bo'yicha kurslar topasiz.",
+                  "olympiads-heading": "Olmpiadalar",
+                  "olympiads-description": "Biz shuningdek turli ilmiy olimpiadalarga tayyorgarlik ko'rish uchun materiallar taklif qilamiz.",
+                  "research-heading": "Tadqiqotlar",
+                  "research-description": "Biz ilmiy tadqiqotlarni qo'llab-quvvatlaymiz va talabalarni ilmiy loyihalarda ishtirok etishga undaymiz.",
+                  "contact-heading": "Aloqa",
+                  "contact-description": "Qo'shimcha ma'lumot yoki yordam olish uchun biz bilan bog'laning.",
+                  "events-heading": "Tadbirlar",
+                  "events-description": "Bizning yaqin orada bo'lib o'tadigan tadbirlarimiz haqida bilib oling va STEM sohalarida rivojlanishingizga yordam beradi."
+              },
+              "en": {
+                  "title": "STEM Platform",
+                  "welcome-text": "Welcome to the STEM platform",
+                  "welcome-heading": "Welcome to the STEM platform",
+                  "welcome-description": "We are pleased to welcome you to our platform, providing free access to lessons and explanations in STEM subjects.",
+                  "team-heading": "Our Team",
+                  "team-description": "We are a group of experts who created a platform for disseminating knowledge in science, technology, engineering, and mathematics.",
+                  "about-heading": "About Us",
+                  "about-description": "Our goal is to make education accessible for all. We aim to provide free resources and support to students around the world.",
+                  "courses-heading": "Courses",
+                  "courses-description": "On our platform, you will find courses on the most relevant STEM subjects.",
+                  "olympiads-heading": "Olympiads",
+                  "olympiads-description": "We also offer materials for preparing for various scientific olympiads.",
+                  "research-heading": "Research",
+                  "research-description": "We support scientific research and encourage students to participate in scientific projects.",
+                  "contact-heading": "Contact Us",
+                  "contact-description": "Contact us for further information or assistance.",
+                  "events-heading": "Events",
+                  "events-description": "Find out about our upcoming events and projects that will help you develop in STEM fields."
+              }
+          };
+
+
+
+
+          // Обновить текст на странице в зависимости от выбранного языка
+          document.getElementById('title').textContent = texts[lang].title;
+          document.getElementById('welcome-text').textContent = texts[lang]['welcome-text'];
+          document.getElementById('welcome-heading').textContent = texts[lang]['welcome-heading'];
+          document.getElementById('welcome-description').textContent = texts[lang]['welcome-description'];
+          document.getElementById('team-heading').textContent = texts[lang]['team-heading'];
+          document.getElementById('team-description').textContent = texts[lang]['team-description'];
+          document.getElementById('about-heading').textContent = texts[lang]['about-heading'];
+          document.getElementById('about-description').textContent = texts[lang]['about-description'];
+          document.getElementById('courses-heading').textContent = texts[lang]['courses-heading'];
+          document.getElementById('courses-description').textContent = texts[lang]['courses-description'];
+          document.getElementById('olympiads-heading').textContent = texts[lang]['olympiads-heading'];
+          document.getElementById('olympiads-description').textContent = texts[lang]['olympiads-description'];
+          document.getElementById('research-heading').textContent = texts[lang]['research-heading'];
+          document.getElementById('research-description').textContent = texts[lang]['research-description'];
+          document.getElementById('contact-heading').textContent = texts[lang]['contact-heading'];
+          document.getElementById('contact-description').textContent = texts[lang]['contact-description'];
+          document.getElementById('events-heading').textContent = texts[lang]['events-heading'];
+          document.getElementById('events-description').textContent = texts[lang]['events-description'];
+      }
+  </script>
 </body>
 </html>
 
@@ -467,86 +559,113 @@
 
 
 
-      <!-- Форма входа / регистрации -->
-   <div class="form-container">
-       <div class="switch-container">
-           <label>Переключиться на регистрацию</label>
-           <label class="switch">
-               <input type="checkbox" id="toggle">
-               <span class="slider"></span>
-           </label>
-       </div>
 
 
-       <!-- Форма входа -->
-       <form id="login-form" class="active">
-           <h2>Вход</h2>
-           <div class="form-group">
-               <label for="login-email">Email:</label>
-               <input type="email" id="login-email" name="login-email" required>
-           </div>
-           <div class="form-group">
-               <label for="login-password">Пароль:</label>
-               <input type="password" id="login-password" name="login-password" required>
-           </div>
-           <button type="submit">Войти</button>
-       </form>
 
 
-       <!-- Форма регистрации -->
+
+
+
+
+
+
+
+
+     <!-- Форма входа / регистрации -->
+  <div class="form-container">
+      <div class="switch-container">
+          <label>Переключиться на регистрацию</label>
+          <label class="switch">
+              <input type="checkbox" id="toggle">
+              <span class="slider"></span>
+          </label>
+      </div>
+
+
+
+
+      <!-- Форма входа -->
+      <form id="login-form" class="active">
+          <h2>Вход</h2>
+          <div class="form-group">
+              <label for="login-email">Email:</label>
+              <input type="email" id="login-email" name="login-email" required>
+          </div>
+          <div class="form-group">
+              <label for="login-password">Пароль:</label>
+              <input type="password" id="login-password" name="login-password" required>
+          </div>
+          <button type="submit">Войти</button>
+      </form>
+
+
+
+
+      <!-- Форма регистрации -->
 <form id="register-form">
-   <h2>Регистрация</h2>
-   <div class="form-group">
-       <label for="register-name">Имя:</label>
-       <input type="text" id="register-name" name="register-name" required>
-   </div>
-   <div class="form-group">
-       <label for="register-surname">Фамилия:</label>
-       <input type="text" id="register-surname" name="register-surname" required>
-   </div>
-   <div class="form-group">
-       <label for="register-country">Страна:</label>
-       <input type="text" id="register-country" name="register-country" required>
-   </div>
-   <div class="form-group">
-       <label for="register-city">Город:</label>
-       <input type="text" id="register-city" name="register-city" required>
-   </div>
-   <div class="form-group">
-       <label for="register-email">Email:</label>
-       <input type="email" id="register-email" name="register-email" required>
-   </div>
-   <div class="form-group">
-       <label for="register-password">Пароль:</label>
-       <input type="password" id="register-password" name="register-password" required>
-   </div>
-   <div class="form-group">
-       <label for="register-password-confirm">Подтвердите пароль:</label>
-       <input type="password" id="register-password-confirm" name="register-password-confirm" required>
-   </div>
-   <button type="submit">Зарегистрироваться</button>
+  <h2>Регистрация</h2>
+  <div class="form-group">
+      <label for="register-name">Имя:</label>
+      <input type="text" id="register-name" name="register-name" required>
+  </div>
+  <div class="form-group">
+      <label for="register-surname">Фамилия:</label>
+      <input type="text" id="register-surname" name="register-surname" required>
+  </div>
+  <div class="form-group">
+      <label for="register-country">Страна:</label>
+      <input type="text" id="register-country" name="register-country" required>
+  </div>
+  <div class="form-group">
+      <label for="register-city">Город:</label>
+      <input type="text" id="register-city" name="register-city" required>
+  </div>
+  <div class="form-group">
+      <label for="register-email">Email:</label>
+      <input type="email" id="register-email" name="register-email" required>
+  </div>
+  <div class="form-group">
+      <label for="register-password">Пароль:</label>
+      <input type="password" id="register-password" name="register-password" required>
+  </div>
+  <div class="form-group">
+      <label for="register-password-confirm">Подтвердите пароль:</label>
+      <input type="password" id="register-password-confirm" name="register-password-confirm" required>
+  </div>
+  <button type="submit">Зарегистрироваться</button>
 </form>
 
 
 
 
-   <!-- JavaScript для переключения форм -->
-   <script>
-       document.getElementById('toggle').addEventListener('change', function() {
-           const loginForm = document.getElementById('login-form');
-           const registerForm = document.getElementById('register-form');
-           if (this.checked) {
-               loginForm.classList.remove('active');
-               registerForm.classList.add('active');
-           } else {
-               loginForm.classList.add('active');
-               registerForm.classList.remove('active');
-           }
-       });
-   </script>
+
+
+
+
+  <!-- JavaScript для переключения форм -->
+  <script>
+      document.getElementById('toggle').addEventListener('change', function() {
+          const loginForm = document.getElementById('login-form');
+          const registerForm = document.getElementById('register-form');
+          if (this.checked) {
+              loginForm.classList.remove('active');
+              registerForm.classList.add('active');
+          } else {
+              loginForm.classList.add('active');
+              registerForm.classList.remove('active');
+          }
+      });
+  </script>
+
+
 
 
 </body>
 </html>
+
+
+
+
+
 
 
