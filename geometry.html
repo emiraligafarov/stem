@@ -34,7 +34,7 @@
             margin: auto;
         }
         .box {
-            background: white;
+            background: #fefefe;
             border-radius: 12px;
             padding: 20px;
             width: 300px;
@@ -67,6 +67,21 @@
         .buttons a:hover {
             background: #357ab9;
         }
+        .back-button {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .back-button a {
+            text-decoration: none;
+            color: white;
+            background: #70386a;
+            padding: 10px 20px;
+            border-radius: 8px;
+            transition: background 0.3s ease;
+        }
+        .back-button a:hover {
+            background: #51205a;
+        }
     </style>
 </head>
 <body>
@@ -78,7 +93,8 @@
         <!-- Уроки -->
         <div class="box">
             <h2>Уроки</h2>
-            <p>Выберите язык для изучения геометрии.</p>
+            <p>Выберите язык для изучения
+                 геометрии.</p>
             <div class="buttons">
                 <a href="#">Русский</a>
                 <a href="#">Ўзбекча</a>
@@ -95,8 +111,12 @@
             </div>
         </div>
     </div>
+
+    <!-- Back to sections button -->
+    <div class="back-button">
+        <a href="math.html">Назад к секциям</a>
+    </div>
 </body>
 </html>
-
 
 
