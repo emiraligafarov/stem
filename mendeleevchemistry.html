@@ -1,156 +1,296 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Международная Менделеевская Олимпиада</title>
-   <style>
-       body {
-           font-family: 'Roboto', sans-serif;
-           margin: 0;
-           padding: 0;
-           background: linear-gradient(135deg, #51205a, #ffffff);
-           color: #000000;
-           min-height: 100vh;
-           display: flex;
-           flex-direction: column;
-           align-items: center;
-       }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Менделеевская Олимпиада - Файлы</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #51205a, #ffffff);
+            color: #000;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
 
-       header {
-           text-align: center;
-           padding: 20px;
-           background: #70386a;
-           color: white;
-           width: 100%;
-           box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-           position: sticky;
-           top: 0;
-           z-index: 1000;
-       }
+        header {
+            background: #70386a;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            width: 100%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
 
-       header h1 {
-           margin: 0;
-           font-size: 36px;
-       }
+        header h1 {
+            margin: 0;
+        }
 
-       header .nav-buttons {
-           margin-top: 10px;
-           display: flex;
-           justify-content: center;
-           gap: 10px;
-       }
+        main {
+            margin: 20px 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            max-width: 1200px;
+            width: 100%;
+        }
 
-       header .nav-buttons a {
-           display: inline-block;
-           font-size: 18px;
-           color: white;
-           text-decoration: none;
-           font-weight: bold;
-           padding: 8px 12px;
-           border: 2px solid #e6e6e6;
-           border-radius: 8px;
-           background-color: transparent;
-           transition: background-color 0.3s ease, color 0.3s ease;
-       }
+        .year-container {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
 
-       header .nav-buttons a:hover {
-           background-color: white;
-           color: #70386a;
-       }
+        .year-container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
 
-       main {
-           padding: 40px 20px;
-           max-width: 1200px;
-           width: 100%;
-           display: flex;
-           flex-direction: column;
-           align-items: center;
-       }
+        .year-container h2 {
+            margin: 0 0 10px;
+            font-size: 24px;
+            color: #70386a;
+        }
 
-       .years-section {
-           display: flex;
-           flex-wrap: wrap;
-           justify-content: center;
-           gap: 20px;
-       }
+        .file-section {
+            margin-top: 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
 
-       .year-box {
-           background: white;
-           border-radius: 12px;
-           padding: 20px;
-           width: 120px;
-           height: 120px;
-           display: flex;
-           justify-content: center;
-           align-items: center;
-           box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-           transition: transform 0.3s ease, box-shadow 0.3s ease;
-           text-align: center;
-           font-size: 20px;
-           font-weight: bold;
-           color: #51205a;
-           cursor: pointer;
-       }
+        .file-section a {
+            padding: 10px 15px;
+            background: #70386a;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+            text-align: center;
+            transition: background 0.3s;
+        }
 
-       .year-box:hover {
-           transform: translateY(-10px);
-           box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-           background: linear-gradient(90deg, #f80000, #0056b3);
-           color: white;
-       }
+        .file-section a:hover {
+            background: #51205a;
+        }
 
-       footer {
-           margin-top: auto;
-           text-align: center;
-           padding: 20px;
-           background: #70386a;
-           color: white;
-           width: 100%;
-           font-size: 14px;
-       }
-   </style>
+        .back-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #51205a;
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .back-button:hover {
+            background-color: #70386a;
+        }
+
+    </style>
 </head>
 <body>
-   <header>
-       <h1>Международная Менделеевская Олимпиада</h1>
-       <div class="nav-buttons">
-           <a href="chemistryolympiads.html" class="back-button">← Назад к Олимпиадам по химии</a>
-       </div>
-   </header>
+    <header>
+   
+        <div class="nav-buttons">
+            <a href="chemistryolympiads.html" class="back-button">← Назад к Олимпиадам по химии</a>
+        </div>
+    </header>
+    <header>
+        <h1>Менделеевская Олимпиада - Файлы</h1>
+    </header>
+    <main>
+        <!-- Блок для года 2006 -->
+        <div class="year-container">
+            <h2>2006</h2>
+            <div class="file-section">
+                <a href="https://drive.google.com/uc?export=download&id=1kMZXpK7fR76iedMxtJLxq0sy5XslFkn1" download>1 тур</a>
+                <a href="/files/2006_task2.pdf" download>2 тур</a>
+                <a href="/files/2006_solutions1.pdf" download>Решение первого тура</a>
+                <a href="/files/2006_solutions2.pdf" download>Решение второго тура</a>
+            </div>
+        </div>
 
-   <main>
-       <div class="years-section">
-           <!-- Создание боксов с годами -->
-           <div class="year-box" onclick="goToYear(2015)">2006</div>
-           <div class="year-box" onclick="goToYear(2015)">2007</div>
-           <div class="year-box" onclick="goToYear(2015)">2008</div>
-           <div class="year-box" onclick="goToYear(2015)">2009</div>
-           <div class="year-box" onclick="goToYear(2015)">2010</div>
-           <div class="year-box" onclick="goToYear(2015)">2011</div>
-           <div class="year-box" onclick="goToYear(2015)">2012</div>
-           <div class="year-box" onclick="goToYear(2015)">2013</div>
-           <div class="year-box" onclick="goToYear(2015)">2014</div>
-           <div class="year-box" onclick="goToYear(2015)">2015</div>
-           <div class="year-box" onclick="goToYear(2016)">2016</div>
-           <div class="year-box" onclick="goToYear(2017)">2017</div>
-           <div class="year-box" onclick="goToYear(2018)">2018</div>
-           <div class="year-box" onclick="goToYear(2019)">2019</div>
-           <div class="year-box" onclick="goToYear(2020)">2020</div>
-           <div class="year-box" onclick="goToYear(2021)">2021</div>
-           <div class="year-box" onclick="goToYear(2022)">2022</div>
-           <div class="year-box" onclick="goToYear(2023)">2023</div>
-           <div class="year-box" onclick="goToYear(2024)">2024</div>
-       </div>
-   </main>
+        <!-- Блок для года 2007 -->
+        <div class="year-container">
+            <h2>2007</h2>
+            <div class="file-section">
+                <a href="/files/2007_task1.pdf" download>1 тур</a>
+                <a href="/files/2007_task2.pdf" download>2 тур</a>
+                <a href="/files/2007_solutions1.pdf" download>Решение первого тура</a>
+                <a href="/files/2007_solutions2.pdf" download>Решение второго тура</a>
+            </div>
+        </div>
+        <!-- Блок для года 2008 -->
+        <div class="year-container">
+            <h2>2008</h2>
+            <div class="file-section">
+                <a href="/files/2008_task1.pdf" download>1 тур</a>
+                <a href="/files/2008_task2.pdf" download>2 тур</a>
+                <a href="/files/2008_solutions1.pdf" download>Решение первого тура</a>
+                <a href="/files/2008_solutions2.pdf" download>Решение второго тура</a>
+            </div>
+        </div>
+
+ <!-- Блок для года 2009 -->
+ <div class="year-container">
+    <h2>2009</h2>
+    <div class="file-section">
+        <a href="/files/2009_task1.pdf" download>1 тур</a>
+        <a href="/files/2009_task2.pdf" download>2 тур</a>
+        <a href="/files/2009_solutions1.pdf" download>Решение первого тура</a>
+        <a href="/files/2009_solutions2.pdf" download>Решение второго тура</a>
+    </div>
+</div>
+
+ <!-- Блок для года 2010 -->
+ <div class="year-container">
+    <h2>2010</h2>
+    <div class="file-section">
+        <a href="/files/2010_task1.pdf" download>1 тур</a>
+        <a href="/files/2010_task2.pdf" download>2 тур</a>
+        <a href="/files/2010_solutions1.pdf" download>Решение первого тура</a>
+        <a href="/files/2010_solutions2.pdf" download>Решение второго тура</a>
+    </div>
+</div>
+
+ <!-- Блок для года 2011 -->
+ <div class="year-container">
+    <h2>2011</h2>
+    <div class="file-section">
+        <a href="/files/2011_task1.pdf" download>1 тур</a>
+        <a href="/files/2011_task2.pdf" download>2 тур</a>
+        <a href="/files/2011_solutions1.pdf" download>Решение первого тура</a>
+        <a href="/files/2011_solutions2.pdf" download>Решение второго тура</a>
+    </div>
+</div>
+ <!-- Блок для года 2012 -->
+ <div class="year-container">
+    <h2>2012</h2>
+    <div class="file-section">
+        <a href="/files/2012_task1.pdf" download>1 тур</a>
+        <a href="/files/2012_task2.pdf" download>2 тур</a>
+        <a href="/files/2012_solutions1.pdf" download>Решение первого тура</a>
+        <a href="/files/2012_solutions2.pdf" download>Решение второго тура</a>
+    </div>
+</div>
 
 
-   <script>
-       // Функция для перехода к выбранному году
-       function goToYear(year) {
-           alert(`Вы выбрали ${year} год!`); // Замените на переход
-           // Например: window.location.href = `republic_${year}.html`;
-       }
-   </script>
+ <!-- Блок для года 2013 -->
+ <div class="year-container">
+    <h2>2013</h2>
+    <div class="file-section">
+        <a href="/files/2013_task1.pdf" download>1 тур</a>
+        <a href="/files/2013_task2.pdf" download>2 тур</a>
+        <a href="/files/2013_solutions1.pdf" download>Решение первого тура</a>
+        <a href="/files/2013_solutions2.pdf" download>Решение второго тура</a>
+    </div>
+</div>
+ <!-- Блок для года 2014 -->
+ <div class="year-container">
+    <h2>2014</h2>
+    <div class="file-section">
+        <a href="/files/2014_task1.pdf" download>1 тур</a>
+        <a href="/files/2014_task2.pdf" download>2 тур</a>
+        <a href="/files/2014_solutions1.pdf" download>Решение первого тура</a>
+        <a href="/files/2014_solutions2.pdf" download>Решение второго тура</a>
+    </div>
+</div>
+ <!-- Блок для года 2015 -->
+ <div class="year-container">
+    <h2>2015</h2>
+    <div class="file-section">
+        <a href="/files/2015_task1.pdf" download>1 тур</a>
+        <a href="/files/2015_task2.pdf" download>2 тур</a>
+        <a href="/files/2015_solutions1.pdf" download>Решение первого тура</a>
+        <a href="/files/2015_solutions2.pdf" download>Решение второго тура</a>
+    </div>
+</div>
+ <!-- Блок для года 2016 -->
+ <div class="year-container">
+    <h2>2016</h2>
+    <div class="file-section">
+        <a href="/files/2016_task1.pdf" download>1 тур</a>
+        <a href="/files/2016_task2.pdf" download>2 тур</a>
+        <a href="/files/2016_solutions1.pdf" download>Решение первого тура</a>
+        <a href="/files/2016_solutions2.pdf" download>Решение второго тура</a>
+    </div>
+</div>
+
+ <!-- Блок для года 2017 -->
+ <div class="year-container">
+    <h2>2017</h2>
+    <div class="file-section">
+        <a href="/files/2017_task1.pdf" download>1 тур</a>
+        <a href="/files/2017_task2.pdf" download>2 тур</a>
+        <a href="/files/2017_solutions1.pdf" download>Решение первого тура</a>
+        <a href="/files/2017_solutions2.pdf" download>Решение второго тура</a>
+    </div>
+</div>
+
+ <!-- Блок для года 2018 -->
+ <div class="year-container">
+    <h2>2018</h2>
+    <div class="file-section">
+        <a href="/files/2018_task1.pdf" download>1 тур</a>
+        <a href="/files/2018_task2.pdf" download>2 тур</a>
+        <a href="/files/2018_solutions1.pdf" download>Решение первого тура</a>
+        <a href="/files/2018_solutions2.pdf" download>Решение второго тура</a>
+    </div>
+</div>
+ <!-- Блок для года 2019-->
+ <div class="year-container">
+    <h2>2019</h2>
+    <div class="file-section">
+        <a href="/files/2019_task1.pdf" download>1 тур</a>
+        <a href="/files/2019_task2.pdf" download>2 тур</a>
+        <a href="/files/2019_solutions1.pdf" download>Решение первого тура</a>
+        <a href="/files/2019_solutions2.pdf" download>Решение второго тура</a>
+    </div>
+</div>
+ <!-- Блок для года 2020 -->
+ <div class="year-container">
+    <h2>2020</h2>
+    <div class="file-section">
+        <a href="/files/2020_task1.pdf" download>1 тур</a>
+        <a href="/files/2020_task2.pdf" download>2 тур</a>
+        <a href="/files/2020_solutions1.pdf" download>Решение первого тура</a>
+        <a href="/files/2020_solutions2.pdf" download>Решение второго тура</a>
+    </div>
+</div>
+ <!-- Блок для года 2021 -->
+ <div class="year-container">
+    <h2>2021</h2>
+    <div class="file-section">
+        <a href="/files/2021_task1.pdf" download>1 тур</a>
+        <a href="/files/2021_task2.pdf" download>2 тур</a>
+        <a href="/files/2021_solutions1.pdf" download>Решение первого тура</a>
+        <a href="/files/2021_solutions2.pdf" download>Решение второго тура</a>
+    </div>
+</div>
+ <!-- Блок для года 2022-->
+ <div class="year-container">
+    <h2>2022</h2>
+    <div class="file-section">
+        <a href="/files/2022_task1.pdf" download>1 тур</a>
+        <a href="/files/2022_task2.pdf" download>2 тур</a>
+        <a href="/files/2022_solutions1.pdf" download>Решение первого тура</a>
+        <a href="/files/2022_solutions2.pdf" download>Решение второго тура</a>
+    </div>
+</div>
+        <!-- Повторите блоки для других лет -->
+    </main>
+   
 </body>
 </html>
