@@ -1,144 +1,177 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Pagodane </title>
-   <style>
-       body {
-           font-family: 'Roboto', sans-serif;
-           margin: 0;
-           padding: 0;
-           background: linear-gradient(135deg, #51205a, #ffffff);
-           color: #000000;
-           min-height: 100vh;
-           display: flex;
-           flex-direction: column;
-           align-items: center;
-       }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagodane - Файлы</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #51205a, #ffffff);
+            color: #000;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
 
-       header {
-           text-align: center;
-           padding: 20px;
-           background: #70386a;
-           color: white;
-           width: 100%;
-           box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-           position: sticky;
-           top: 0;
-           z-index: 1000;
-       }
+        header {
+            background: #70386a;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            width: 100%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
 
-       header h1 {
-           margin: 0;
-           font-size: 36px;
-       }
+        header h1 {
+            margin: 0;
+        }
 
-       header .nav-buttons {
-           margin-top: 10px;
-           display: flex;
-           justify-content: center;
-           gap: 10px;
-       }
+        main {
+            margin: 20px 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            max-width: 1200px;
+            width: 100%;
+        }
 
-       header .nav-buttons a {
-           display: inline-block;
-           font-size: 18px;
-           color: white;
-           text-decoration: none;
-           font-weight: bold;
-           padding: 8px 12px;
-           border: 2px solid #e6e6e6;
-           border-radius: 8px;
-           background-color: transparent;
-           transition: background-color 0.3s ease, color 0.3s ease;
-       }
+        .year-container {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
 
-       header .nav-buttons a:hover {
-           background-color: white;
-           color: #70386a;
-       }
+        .year-container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
 
-       main {
-           padding: 40px 20px;
-           max-width: 1200px;
-           width: 100%;
-           display: flex;
-           flex-direction: column;
-           align-items: center;
-       }
+        .year-container h2 {
+            margin: 0 0 10px;
+            font-size: 24px;
+            color: #70386a;
+        }
 
-       .years-section {
-           display: flex;
-           flex-wrap: wrap;
-           justify-content: center;
-           gap: 20px;
-       }
+        .file-section {
+            margin-top: 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
 
-       .year-box {
-           background: white;
-           border-radius: 12px;
-           padding: 20px;
-           width: 120px;
-           height: 120px;
-           display: flex;
-           justify-content: center;
-           align-items: center;
-           box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-           transition: transform 0.3s ease, box-shadow 0.3s ease;
-           text-align: center;
-           font-size: 20px;
-           font-weight: bold;
-           color: #51205a;
-           cursor: pointer;
-       }
+        .file-section a {
+            padding: 10px 15px;
+            background: #70386a;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+            text-align: center;
+            transition: background 0.3s;
+        }
 
-       .year-box:hover {
-           transform: translateY(-10px);
-           box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-           background: linear-gradient(90deg, #f80000, #0056b3);
-           color: white;
-       }
+        .file-section a:hover {
+            background: #51205a;
+        }
 
-       footer {
-           margin-top: auto;
-           text-align: center;
-           padding: 20px;
-           background: #70386a;
-           color: white;
-           width: 100%;
-           font-size: 14px;
-       }
-   </style>
+        .back-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #51205a;
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .back-button:hover {
+            background-color: #70386a;
+        }
+
+    </style>
 </head>
 <body>
-   <header>
-       <h1>Pagodane</h1>
-       <div class="nav-buttons">
-           <a href="chemistryolympiads.html" class="back-button">← Назад к Олимпиадам по химии</a>
-       </div>
-   </header>
+    <header>
+   
+        <div class="nav-buttons">
+            <a href="chemistryolympiads.html" class="back-button">← Назад к Олимпиадам по химии</a>
+        </div>
+    </header>
+    <header>
+        <h1>Pagodane - Файлы</h1>
+    </header>
+    <main>
+        <!-- Блок для 3rd -->
+        <div class="year-container">
+            <h2>3rd</h2>
+            <div class="file-section">
+                <a href="https://drive.google.com/file/d/1FnRxyVbVmxk9vh5Q2iWk0wwatCWZDYDl/view?usp=share_link" download>7-8 класс</a>
+                <a href="https://drive.google.com/file/d/1v7WKx5XoH8d7ZwAq_y6jdskEosJHcmIH/view?usp=share_link" download>9 класс</a>
+                <a href="https://drive.google.com/file/d/1rNmV5UpRJHhpvQPxGcsfJC0lnN5OsxjD/view?usp=share_link" download>10-12 класс</a>
+            </div>
+        </div>
 
-   <main>
-       <div class="years-section">
-           <!-- Создание боксов с годами -->
-           <div class="year-box" onclick="goToYear(2015)">3</div>
-           <div class="year-box" onclick="goToYear(2016)">4</div>
-           <div class="year-box" onclick="goToYear(2017)">5</div>
-           <div class="year-box" onclick="goToYear(2018)">6</div>
-           <div class="year-box" onclick="goToYear(2019)">7</div>
-           <div class="year-box" onclick="goToYear(2020)">8</div>
-         
-       </div>
-   </main>
+         <!-- Блок для 4th -->
+         <div class="year-container">
+            <h2>4th</h2>
+            <div class="file-section">
+                <a href="https://drive.google.com/file/d/1i_ijXhm-N3ByJh2lvkPE48KSmcEsmz-Y/view?usp=share_link" download>7-8 класс</a>
+                <a href="https://drive.google.com/file/d/1p87FXvdrsiFJpvrjTCNfStejj6RdS5It/view?usp=share_link" download>9 класс</a>
+                <a href="https://drive.google.com/file/d/1aW5RNq17Q3vbWzQ0cIStUQFdS4xn0p40/view?usp=share_link" download>10-12 класс</a>
+            </div>
+        </div>
+         <!-- Блок для 5th -->
+         <div class="year-container">
+            <h2>5th</h2>
+            <div class="file-section">
+                <a href="https://drive.google.com/file/d/1LnnLHt3mpIivZabH_axRh6ZwEsuwsQLP/view?usp=share_link" download>7-8 класс</a>
+                <a href="https://drive.google.com/file/d/1VKE1pbSWK5yenlzpjEvGC18Auix7o93Y/view?usp=share_link" download>9 класс</a>
+                <a href="https://drive.google.com/file/d/1uQhjIRh5RiqeMqdAv6kDY2XAA_Hn4krY/view?usp=share_link" download>10-12 класс</a>
+            </div>
+        </div>
 
+  <!-- Блок для 6th -->
+  <div class="year-container">
+    <h2>6th</h2>
+    <div class="file-section">
+        <a href="https://drive.google.com/file/d/1Y_LNTJny1QIsPOhLooHbQ0EOK4SPcqmg/view?usp=share_link" download>7-8 класс</a>
+        <a href="https://drive.google.com/file/d/1GBhmZVAqLZ39Yra-YHeHYUGT1Oq5q2-e/view?usp=share_link" download>9 класс</a>
+        <a href="https://drive.google.com/file/d/14104iAbaay0BXLdYlfH2LHND9m9YOIy1/view?usp=share_link" download>10-12 класс</a>
+    </div>
+</div>
 
-   <script>
-       // Функция для перехода к выбранному году
-       function goToYear(year) {
-           alert(`Вы выбрали ${year} год!`); // Замените на переход
-           // Например: window.location.href = `republic_${year}.html`;
-       }
-   </script>
+  <!-- Блок для 7th -->
+  <div class="year-container">
+    <h2>7th</h2>
+    <div class="file-section">
+        <a href="https://drive.google.com/file/d/1iETtD0E5MIEU_sGSe76T6YNh-4tnScjL/view?usp=share_link" download>7-8 класс</a>
+        <a href="https://drive.google.com/file/d/1MR9C9poXE7NNfwbw8I0Omv4D8B47R0rK/view?usp=share_link" download>9 класс</a>
+        <a href="https://drive.google.com/file/d/17-AjyTuvLkvoLGQOtjIE_vtG-Q6SEVtf/view?usp=share_link" download>10-12 класс</a>
+    </div>
+</div>
+
+  <!-- Блок для 8th -->
+  <div class="year-container">
+    <h2>8th</h2>
+    <div class="file-section">
+        <a href="https://drive.google.com/file/d/14Uptq8MvWNtTA_Zx1r0vprSQN-WWbtSf/view?usp=share_link" download>7-8 класс</a>
+        <a href="https://drive.google.com/file/d/1xZ89UuEMaC8P8A5OVx1gJdAUrn88w-7J/view?usp=share_link" download>9 класс</a>
+        <a href="https://drive.google.com/file/d/1D3maQhfRarSXDN6iuhV6GYBBv7232QbM/view?usp=share_link" download>10-12 класс</a>
+    </div>
+</div>
+  
+        <!-- Повторите блоки для других лет -->
+    </main>
+   
 </body>
 </html>

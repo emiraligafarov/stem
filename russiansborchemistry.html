@@ -1,167 +1,300 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Сборы Российской Федерации</title>
-   <style>
-       body {
-           font-family: 'Roboto', sans-serif;
-           margin: 0;
-           padding: 0;
-           background: linear-gradient(135deg, #51205a, #ffffff);
-           color: #000000;
-           min-height: 100vh;
-           display: flex;
-           flex-direction: column;
-           align-items: center;
-       }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Российские сборы  - Файлы</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #51205a, #ffffff);
+            color: #000;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
 
-       header {
-           text-align: center;
-           padding: 20px;
-           background: #70386a;
-           color: white;
-           width: 100%;
-           box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-           position: sticky;
-           top: 0;
-           z-index: 1000;
-       }
+        header {
+            background: #70386a;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            width: 100%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
 
-       header h1 {
-           margin: 0;
-           font-size: 36px;
-       }
+        header h1 {
+            margin: 0;
+        }
 
-       header .nav-buttons {
-           margin-top: 10px;
-           display: flex;
-           justify-content: center;
-           gap: 10px;
-       }
+        main {
+            margin: 20px 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            max-width: 1200px;
+            width: 100%;
+        }
 
-       header .nav-buttons a {
-           display: inline-block;
-           font-size: 18px;
-           color: white;
-           text-decoration: none;
-           font-weight: bold;
-           padding: 8px 12px;
-           border: 2px solid #e6e6e6;
-           border-radius: 8px;
-           background-color: transparent;
-           transition: background-color 0.3s ease, color 0.3s ease;
-       }
+        .year-container {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
 
-       header .nav-buttons a:hover {
-           background-color: white;
-           color: #70386a;
-       }
+        .year-container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
 
-       main {
-           padding: 40px 20px;
-           max-width: 1200px;
-           width: 100%;
-           display: flex;
-           flex-direction: column;
-           align-items: center;
-       }
+        .year-container h2 {
+            margin: 0 0 10px;
+            font-size: 24px;
+            color: #70386a;
+        }
 
-       .years-section {
-           display: flex;
-           flex-wrap: wrap;
-           justify-content: center;
-           gap: 20px;
-       }
+        .file-section {
+            margin-top: 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
 
-       .year-box {
-           background: white;
-           border-radius: 12px;
-           padding: 20px;
-           width: 120px;
-           height: 120px;
-           display: flex;
-           justify-content: center;
-           align-items: center;
-           box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-           transition: transform 0.3s ease, box-shadow 0.3s ease;
-           text-align: center;
-           font-size: 20px;
-           font-weight: bold;
-           color: #51205a;
-           cursor: pointer;
-       }
+        .file-section a {
+            padding: 10px 15px;
+            background: #70386a;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+            text-align: center;
+            transition: background 0.3s;
+        }
 
-       .year-box:hover {
-           transform: translateY(-10px);
-           box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-           background: linear-gradient(90deg, #f80000, #0056b3);
-           color: white;
-       }
+        .file-section a:hover {
+            background: #51205a;
+        }
 
-       footer {
-           margin-top: auto;
-           text-align: center;
-           padding: 20px;
-           background: #70386a;
-           color: white;
-           width: 100%;
-           font-size: 14px;
-       }
-   </style>
+        .back-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #51205a;
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .back-button:hover {
+            background-color: #70386a;
+        }
+
+    </style>
 </head>
 <body>
-   <header>
-       <h1>Сборы Российской Федерации</h1>
-       <div class="nav-buttons">
-           <a href="chemistryolympiads.html" class="back-button">← Назад к Олимпиадам по химии</a>
-       </div>
-   </header>
+    <header>
+   
+        <div class="nav-buttons">
+            <a href="chemistryolympiads.html" class="back-button">← Назад к Олимпиадам по химии</a>
+        </div>
+    </header>
+    <header>
+        <h1>Российские сборы - Файлы</h1>
+    </header>
+    <main>
+ <!-- Блок для года 2001 -->
+ <div class="year-container">
+<h2>2001</h2>
+<div class="file-section">
+ <a href="https://drive.google.com/file/d/1Fw5TsLwSjrsgLAx4ud2_Qs64zc0mj30K/view?usp=share_link" download>Теория (Задачи)</a>
+</div>
+</div>
+            
+ <!-- Блок для года 2002 -->
+ <div class="year-container">
+<h2>2002</h2>
+<div class="file-section">
+ <a href="https://drive.google.com/file/d/18fZIlvGV1CN7ewEEARunrzqHzvpufc9a/view?usp=share_link" download>Теория (Задачи)</a>
+</div>
+</div>
+            
+<!-- Блок для года 2003 -->
+<div class="year-container">
+ <h2>2003</h2>
+<div class="file-section">
+<a href="https://drive.google.com/file/d/1vDzctfEqMD-sHlqte6Adqe6Pxp3SLTcA/view?usp=share_link" download>Теория (Задачи)</a>
+</div>
+</div>
+                        
+<!-- Блок для года 2004 -->
+  <div class="year-container">
+<h2>2004</h2>
+<div class="file-section">
+<a href="https://drive.google.com/file/d/1OssXg8qzcv-UMQvXK0_HEW0rdBwbYsQ7/view?usp=share_link" download>Теория (Задачи)</a>
+</div>
+</div>
+                        
+<!-- Блок для года 2005 -->
+<div class="year-container">
+<h2>2005</h2>
+<div class="file-section">
+<a href="https://drive.google.com/file/d/1cHEiFV-zyuOwlcOtAtJ-l7nd9xnJA1is/view?usp=share_link" download>Теория (Задачи)</a>
+</div>
+</div>
+ <!-- Блок для года 2006 -->
+<div class="year-container">
+<h2>2006</h2>
+<div class="file-section">
+ <a href="https://drive.google.com/file/d/1srI6DJRryYZO9kw4ZwSpDcy0-qIuxJc6/view?usp=share_link" download>Теория (Задачи)</a>
+</div>
+</div>
+                        
+                        
+<!-- Блок для года 2008 -->
+                          <div class="year-container">
+                            <h2>2008</h2>
+                            <div class="file-section">
+                                <a href="https://drive.google.com/file/d/10grI9jJA4i4Q-cQbgBaoN6EXduS5-4tU/view?usp=share_link" download>December</a>
+                                <a href="https://drive.google.com/file/d/1Y2hsN_IhP9Ymo0XgUB93B2RQO6KMZlD7/view?usp=share_link" download>June</a>
+                                <a href="https://drive.google.com/file/d/118Agc9rGSFk8PCyAzHz72vjpV1G8IBiZ/view?usp=share_link" download>December Решение</a>
+                                <a href="https://drive.google.com/file/d/1uCH53SE0Awfq84T4MZvPVrX3ycSD0fHq/view?usp=share_link" download>June Решение</a>
+                            </div>
+                        </div>
+                          <!-- Блок для года 2009 -->
+                          <div class="year-container">
+                            <h2>2009</h2>
+                            <div class="file-section">
+                                <a href="https://drive.google.com/file/d/1MPE_xjLOjNrddwc3rs47TnFlWIuwZl31/view?usp=share_link" download>December</a>
+                                <a href="https://drive.google.com/file/d/1HbsVx1COvlmGd-o131n5TevqJITxylCT/view?usp=share_link" download>June</a>
+                                <a href="https://drive.google.com/file/d/1w00-971rxBJCeM1kdRBgK3HekpDvgK4j/view?usp=share_link" download>December Решение</a>
+                                <a href="https://drive.google.com/file/d/1PE1iuJ-DQkKsP7bzPEGOEF450VWYWjrj/view?usp=share_link" download>June Решение</a>
+                            </div>
+                        </div>
+                          <!-- Блок для года 2010 -->
+                          <div class="year-container">
+                            <h2>2010</h2>
+                            <div class="file-section">
+                                <a href="https://drive.google.com/file/d/14Z9CJXw35LKCo9l56R1zD-7ZDausVeM5/view?usp=share_link" download>June</a>
+                                <a href="https://drive.google.com/file/d/1WO3qKUc8fgFZsLAQ0Huiu5DzqfV82noJ/view?usp=share_link" download>October</a>
+                                <a href="https://drive.google.com/file/d/1fSr8337vmjt0HyppjQDgr2OLE6iKEmgi/view?usp=sharing" download>October Решение</a>
+                                <a href="https://drive.google.com/file/d/1ay-XHHLL6W3F3krKtDwcbiedZTElnDC7/view?usp=sharing" download>June Решение</a>
+                            </div>
+                        </div>
+                 <!-- Блок для года 2011 -->
+                 <div class="year-container">
+                    <div class="year-container">
+                        <h2>2011</h2>
+                        <div class="file-section">
+                            <a href="https://drive.google.com/file/d/1mW66RkS8qgyhuEMR4GZgR2RdEJvfC8dg/view?usp=share_link"download>June</a>
+                            <a href="https://drive.google.com/file/d/1r5ng74eX7WoN1N1PjcQKQjcYpRJWDmQl/view?usp=share_link"download>November</a>
+                            <a href="https://drive.google.com/file/d/1bmPNkmwRXX6JUKYFS2tWjVUObWtw-Cqb/view?usp=share_link"download>November Решение</a>
+                            <a href="https://drive.google.com/file/d/1kvPnduPYCAX5wBlFG86TV7d_hyHHRiwK/view?usp=share_link"download>June Решение</a>
+                        </div>
+                    </div>
+                       
+                          <!-- Блок для года 2012 -->
+                          <div class="year-container">
+                            <h2>2012</h2>
+                            <div class="file-section">
+                                <a href="https://drive.google.com/file/d/1XDYY6MWCeQmTeLjGStFFo8O5LGYmZCXs/view?usp=share_link" download>May</a>
+                                <a href="https://drive.google.com/file/d/19wBtNsNLrQhDsKoDbms8rEmtuLzv7OyP/view?usp=share_link" download>November</a>
+                                <a href="https://drive.google.com/file/d/1rEfZz_C8DYwQO1gMMC2oU4vG1njxbVVg/view?usp=share_link" download>November Решение</a>
+                            </div>
+                        </div>
+                        
+                         <!-- Блок для года 2013 -->
+                         <div class="year-container">
+                            <h2>2013</h2>
+                            <div class="file-section">
+                                <a href="https://drive.google.com/file/d/1Ve2qu3R8m_vCp0djTVPet_fhdi33PQNf/view?usp=share_link" download>June</a>
+                                <a href="https://drive.google.com/file/d/1tCUpRqakPrMz5Cztfi2xTDNKUJ3JaWTw/view?usp=share_link" download>November</a>
+                                <a href="https://drive.google.com/file/d/16nQHjNrLAwXbHtgApOqnzDMitJlQgMTm/view?usp=share_link" download>November Решение</a>
+                                <a href="https://drive.google.com/file/d/1az_Yi3tjiKzW0HGtTyKacZSQCuJAJgrd/view?usp=share_link" download>June Решение</a>
+                            </div>
+                        </div>
+            
+                          <!-- Блок для года 2014 -->
+                          <div class="year-container">
+                            <h2>2014</h2>
+                            <div class="file-section">
+                                <a href="https://drive.google.com/file/d/1dYGnZiJ02LhGsy2BnonVdgCSpEKQ1Mao/view?usp=share_link" download>June</a>
+                                <a href="https://drive.google.com/file/d/1MyMh5WQE3vJ4ApRzI9eLbgTV5QZgliwX/view?usp=share_link" download>November</a>
+                                <a href="https://drive.google.com/file/d/1az_Yi3tjiKzW0HGtTyKacZSQCuJAJgrd/view?usp=share_link" download>June Решение</a>
+                                <a href="https://drive.google.com/file/d/1fysTsvmY1EpJhVzVJfTQJTaxERwuDfvR/view?usp=share_link" download>November Решение</a>
+                            </div>
+                        </div>
+                        
+                          <!-- Блок для года 2015 -->
+                          <div class="year-container">
+                            <h2>2015</h2>
+                            <div class="file-section">
+                                <a href="https://drive.google.com/file/d/1WEyhCnMCCtlSs5Tq15RNRSLUKFbBzH-M/view?usp=share_link" download>November</a>
+                                <a href="https://drive.google.com/file/d/1p7z9KwDuGoMtvtZq5dLNifmLAkdPk2WK/view?usp=share_link" download>November Решение</a>
+                            </div>
+                        </div>
+                        
+                          <!-- Блок для года 2017 -->
+                          <div class="year-container">
+                            <h2>2017</h2>
+                            <div class="file-section">
+                                <a href="https://drive.google.com/file/d/1ke-ASEoXdsGjIMBrY8CVye_X0weI1-oP/view?usp=share_link" download>November</a>
+                            </div>
+                        </div>
+                        <!-- Блок для года 2018 -->
+                        <div class="year-container">
+                            <h2>2018</h2>
+                            <div class="file-section">
+                                <a href="https://drive.google.com/file/d/1KKoyo4BqW8e0XtMsPx45F4-oDMnIc7ga/view?usp=share_link" download>June</a>
+                                <a href="https://drive.google.com/file/d/1AWFKouJ9IDLhKKnJ3CbVaodekkflAsgn/view?usp=share_link" download>November</a>
+                                <a href="https://drive.google.com/file/d/1-lpWOokFRxKbefwnEq2dUid4I7DWJkQY/view?usp=share_link" download>November Решение</a>
+                                <a href="https://drive.google.com/file/d/1ZgYtDFkWb2bcKgy9J-zEgDClDyCVMdsz/view?usp=share_link" download>June Решение</a>
+                            </div>
+                        </div>
+                        <!-- Блок для года 2019 -->
+                        <div class="year-container">
+                            <h2>2019</h2>
+                            <div class="file-section">
+                                <a href="https://drive.google.com/file/d/1xHmG-QGb-rX04JLNpWVuGp0pL9MTDstv/view?usp=share_link" download>June</a>
+                                <a href="https://drive.google.com/file/d/1aYwyXI1rU2IGP8Vrpd5U_DpiahDLdfQf/view?usp=share_link" download>November</a>
+                                <a href="https://drive.google.com/file/d/1BR8Y7qnurfpSaOavGCwBCN1Tt7RCSWhE/view?usp=share_link" download>November Решение</a>
+                                <a href="https://drive.google.com/file/d/1ndZLsaQrY3GSAI93AHtPXNXm8YSy1Tar/view?usp=share_link" download>June Решение</a>
+                            </div>
+                        </div>
+                        <!-- Блок для года 2020 -->
+                        <div class="year-container">
+                            <h2>2020</h2>
+                            <div class="file-section">
+                                <a href="https://drive.google.com/file/d/16n6B8-5vMn7Q6js0MVMSbnFU5A_kJB3m/view?usp=share_link" download>June</a>
+                                <a href="https://drive.google.com/file/d/1N7tfWbAgzXPuKl09LwDmlXbsit9XbTQE/view?usp=share_link" download>November</a>
+                                <a href="https://drive.google.com/file/d/1Japij9-9oq6BTBDbw12W9GxWMknfMJfU/view?usp=share_link" download>November Решение</a>
+                                <a href="https://drive.google.com/file/d/1taC4X1_mANbsFPoF9NAkKABy7ckQlmT1/view?usp=share_link" download>June Решение</a>
+                            </div>
+                        </div>
+                        <!-- Блок для года 2021 -->
+                        <div class="year-container">
+                            <h2>2021</h2>
+                            <div class="file-section">
+                                <a href="https://drive.google.com/file/d/1JY8wh8ic1XD79avJNHp_b5XBqAHe7dBB/view?usp=share_link" download>June</a>
+                                <a href="https://drive.google.com/file/d/1E6rgagiuEBYOVok35B5SWl6BEy6FkDof/view?usp=share_link" download>June Решение</a>
+                            </div>
+                        </div>
+ 
 
-   <main>
-       <div class="years-section">
-           <!-- Создание боксов с годами -->
-           <div class="year-box" onclick="goToYear(2015)">2001</div>
-           <div class="year-box" onclick="goToYear(2015)">2002</div>
-           <div class="year-box" onclick="goToYear(2015)">2003</div>
-           <div class="year-box" onclick="goToYear(2015)">2004</div>
-           <div class="year-box" onclick="goToYear(2015)">2005</div>
-           <div class="year-box" onclick="goToYear(2015)">2006</div>
-           <div class="year-box" onclick="goToYear(2015)">2008-1</div>
-           <div class="year-box" onclick="goToYear(2015)">2008-2</div>
-           <div class="year-box" onclick="goToYear(2015)">2009-1</div>
-           <div class="year-box" onclick="goToYear(2015)">2009-2</div>
-           <div class="year-box" onclick="goToYear(2015)">2010-1</div>
-           <div class="year-box" onclick="goToYear(2015)">2010-2</div>
-           <div class="year-box" onclick="goToYear(2015)">2011-1</div>
-           <div class="year-box" onclick="goToYear(2015)">2011-2</div>
-           <div class="year-box" onclick="goToYear(2015)">2012-1</div>
-           <div class="year-box" onclick="goToYear(2015)">2012-2</div>
-           <div class="year-box" onclick="goToYear(2015)">2013-1</div>
-           <div class="year-box" onclick="goToYear(2015)">2013-2</div>
-           <div class="year-box" onclick="goToYear(2015)">2014-1</div>
-           <div class="year-box" onclick="goToYear(2015)">2014-2</div>
-           <div class="year-box" onclick="goToYear(2015)">2015-2</div>
-           <div class="year-box" onclick="goToYear(2015)">2017-2</div>
-           <div class="year-box" onclick="goToYear(2015)">2018-1</div>
-           <div class="year-box" onclick="goToYear(2016)">2018-2</div>
-           <div class="year-box" onclick="goToYear(2017)">2019-1</div>
-           <div class="year-box" onclick="goToYear(2018)">2019-2</div>
-           <div class="year-box" onclick="goToYear(2019)">2020-1</div>
-           <div class="year-box" onclick="goToYear(2020)">2020-2</div>
-           <div class="year-box" onclick="goToYear(2021)">2021-1</div>
-        
-       </div>
-   </main>
-
-
-   <script>
-       // Функция для перехода к выбранному году
-       function goToYear(year) {
-           alert(`Вы выбрали ${year} год!`); // Замените на переход
-           // Например: window.location.href = `republic_${year}.html`;
-       }
-   </script>
-</body>
-</html>
+                        
+                        
+                        
+                                <!-- Повторите блоки для других лет -->
+                            </main>
+                           
+                        </body>
+                        </html>
+                               

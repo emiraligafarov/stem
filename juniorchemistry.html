@@ -1,144 +1,167 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Юниорская Олимпиада </title>
-   <style>
-       body {
-           font-family: 'Roboto', sans-serif;
-           margin: 0;
-           padding: 0;
-           background: linear-gradient(135deg, #51205a, #ffffff);
-           color: #000000;
-           min-height: 100vh;
-           display: flex;
-           flex-direction: column;
-           align-items: center;
-       }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Юниорская олимпиада - Файлы</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #51205a, #ffffff);
+            color: #000;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
 
-       header {
-           text-align: center;
-           padding: 20px;
-           background: #70386a;
-           color: white;
-           width: 100%;
-           box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-           position: sticky;
-           top: 0;
-           z-index: 1000;
-       }
+        header {
+            background: #70386a;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            width: 100%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
 
-       header h1 {
-           margin: 0;
-           font-size: 36px;
-       }
+        header h1 {
+            margin: 0;
+        }
 
-       header .nav-buttons {
-           margin-top: 10px;
-           display: flex;
-           justify-content: center;
-           gap: 10px;
-       }
+        main {
+            margin: 20px 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            max-width: 1200px;
+            width: 100%;
+        }
 
-       header .nav-buttons a {
-           display: inline-block;
-           font-size: 18px;
-           color: white;
-           text-decoration: none;
-           font-weight: bold;
-           padding: 8px 12px;
-           border: 2px solid #e6e6e6;
-           border-radius: 8px;
-           background-color: transparent;
-           transition: background-color 0.3s ease, color 0.3s ease;
-       }
+        .year-container {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
 
-       header .nav-buttons a:hover {
-           background-color: white;
-           color: #70386a;
-       }
+        .year-container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
 
-       main {
-           padding: 40px 20px;
-           max-width: 1200px;
-           width: 100%;
-           display: flex;
-           flex-direction: column;
-           align-items: center;
-       }
+        .year-container h2 {
+            margin: 0 0 10px;
+            font-size: 24px;
+            color: #70386a;
+        }
 
-       .years-section {
-           display: flex;
-           flex-wrap: wrap;
-           justify-content: center;
-           gap: 20px;
-       }
+        .file-section {
+            margin-top: 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
 
-       .year-box {
-           background: white;
-           border-radius: 12px;
-           padding: 20px;
-           width: 120px;
-           height: 120px;
-           display: flex;
-           justify-content: center;
-           align-items: center;
-           box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-           transition: transform 0.3s ease, box-shadow 0.3s ease;
-           text-align: center;
-           font-size: 20px;
-           font-weight: bold;
-           color: #51205a;
-           cursor: pointer;
-       }
+        .file-section a {
+            padding: 10px 15px;
+            background: #70386a;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+            text-align: center;
+            transition: background 0.3s;
+        }
 
-       .year-box:hover {
-           transform: translateY(-10px);
-           box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-           background: linear-gradient(90deg, #f80000, #0056b3);
-           color: white;
-       }
+        .file-section a:hover {
+            background: #51205a;
+        }
 
-       footer {
-           margin-top: auto;
-           text-align: center;
-           padding: 20px;
-           background: #70386a;
-           color: white;
-           width: 100%;
-           font-size: 14px;
-       }
-   </style>
+        .back-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #51205a;
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .back-button:hover {
+            background-color: #70386a;
+        }
+
+    </style>
 </head>
 <body>
-   <header>
-       <h1>Юниорская олимпиада</h1>
-       <div class="nav-buttons">
-           <a href="chemistryolympiads.html" class="back-button">← Назад к Олимпиадам по химии</a>
-       </div>
-   </header>
+    <header>
+   
+        <div class="nav-buttons">
+            <a href="chemistryolympiads.html" class="back-button">← Назад к Олимпиадам по химии</a>
+        </div>
+    </header>
+    <header>
+        <h1>Юниорская олимпиада - Файлы</h1>
+    </header>
+    <main>
+        <!-- Блок для 2019 -->
+        <div class="year-container">
+            <h2>2019</h2>
+            <div class="file-section">
+                <a href="https://drive.google.com/file/d/1eBA-wtBxiD2C-o7rmpJ5MHav0mthYQK9/view?usp=share_link" download>Район</a>
+                <a href="https://drive.google.com/file/d/1cM3Frz0GPSrPIv0o9svv-AUndvDBPPRY/view?usp=share_link" download>Область</a>
+                <a href="https://drive.google.com/file/d/10FZBW03dTEgt7E7Mmeip1qbF5enkW0wj/view?usp=share_link" download>Республика</a>
+            </div>
+        </div>
 
-   <main>
-       <div class="years-section">
-           <!-- Создание боксов с годами -->
-      
-           <div class="year-box" onclick="goToYear(2019)">2019</div>
-       
-           <div class="year-box" onclick="goToYear(2021)">2021</div>
-           <div class="year-box" onclick="goToYear(2022)">2022</div>
-           <div class="year-box" onclick="goToYear(2023)">2023</div>
+    
+         <!-- Блок для 2021 -->
+         <div class="year-container">
+            <h2>2021</h2>
+            <div class="file-section">
+                <a href="https://drive.google.com/file/d/1hgUYvFOalpJ2HocWJtiRxT6fgl7Ma3pU/view?usp=share_link" download>7 класс</a>
+                <a href="https://drive.google.com/file/d/1r-8F4oHdSYPnkv1g_JjVWlPug3tHcq2L/view?usp=share_link" download>7 класс решение</a>
+                <a href="https://drive.google.com/file/d/1qE8rzomDyPP2o1rkqLrDy7VSdqhkHXkx/view?usp=share_link" download>8 класс</a>
+                <a href="https://drive.google.com/file/d/1Re4m7s7FKyTRKAwenyvVsp58gEnL_JUX/view?usp=share_link" download>8 класс решение</a>
+            </div>
+        </div>
 
-       </div>
-   </main>
+  <!-- Блок для 2022 -->
+  <div class="year-container">
+    <h2>2022</h2>
+    <div class="file-section">
+        <a href="https://drive.google.com/file/d/1-xpIOhEHWXw6hKLO__6QR2AD6NIKwcCS/view?usp=share_link" download>7 класс Область</a>
+        <a href="https://drive.google.com/file/d/1WGRIp78j92e3DqtBH-w28IXJ40KpBnae/view?usp=share_link" download>7 класс Область решение</a>
+        <a href="https://drive.google.com/file/d/1Yp4F0XIAyXGFozxD1hkJG0melDqJOYox/view?usp=share_link" download>7 класс Республика</a>
+        <a href="https://drive.google.com/file/d/1NV8ohe5kzlynK-649q4YLV5ABUfMXI7V/view?usp=share_link" download>7 класс Республика решение</a>
+        <a href="https://drive.google.com/file/d/1NDslXYSOW5F7QuYAl7VvgFJgVRk6N--d/view?usp=share_link" download>8 класс Республика</a>
+        <a href="https://drive.google.com/file/d/1EMIGU2EWESkx-Vs673aI0Uxb1TnfoMP_/view?usp=share_link" download>8 класс Республика решение</a>
+    </div>
+</div>
 
+  <!-- Блок для 2023 -->
+  <div class="year-container">
+    <h2>2023</h2>
+    <div class="file-section">
+        <a href="https://drive.google.com/file/d/1Iu-s_TDPetdC10597aTAv6Q_2iTKTQsT/view?usp=share_link" download>7 класс Республика</a>
+        <a href="https://drive.google.com/file/d/15iDIt2hZUglOkEZfOZHMirs_U2LAkM60/view?usp=share_link" download>7 класс Республика решение</a>
+        <a href="https://drive.google.com/file/d/1GU3Tczy3GwafQZxJw_6Q0_pJHYDz3oFm/view?usp=share_link" download>8 класс Республика</a>
+        <a href="https://drive.google.com/file/d/1BVy8aSHFcaZK5Y8-fA-OoCZE8yqFojXN/view?usp=share_link" download>8 класс Республика решение</a>
+    </div>
+</div>
 
-   <script>
-       // Функция для перехода к выбранному году
-       function goToYear(year) {
-           alert(`Вы выбрали ${year} год!`); // Замените на переход
-           // Например: window.location.href = `republic_${year}.html`;
-       }
-   </script>
+  
+  
+        <!-- Повторите блоки для других лет -->
+    </main>
+   
 </body>
 </html>
+
