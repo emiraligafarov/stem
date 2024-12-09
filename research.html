@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Project Proposal: Sustainable Utilization of Lignocellulosic Waste for Industrial Applications</title>
+   <style>
+       body {
+           font-family: 'Arial', sans-serif;
+           background: linear-gradient(45deg, #ff9e2c, #1f6f8b); /* Пример градиента */
+           color: #fff;
+           margin: 0;
+           padding: 0;
+       }
+       header {
+           background: linear-gradient(135deg, #ff9900, #ff5b5b);
+           color: #fff;
+           padding: 40px 0;
+           text-align: center;
+           box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+       }
+       header h1 {
+           font-size: 3em;
+           margin: 0;
+           text-transform: uppercase;
+           letter-spacing: 3px;
+       }
+       header p {
+           font-size: 1.2em;
+           margin: 10px 0;
+       }
+       .container {
+           max-width: 1200px;
+           margin: 40px auto;
+           padding: 20px;
+           background-color: linear-gradient(45deg, #ff8c00, #ff0066);
+           border-radius: 10px;
+       }
+       .button {
+           padding: 14px 20px;
+           background: linear-gradient(135deg, #ff5b5b, #ff9900);
+           color: #fff;
+           text-decoration: none;
+           border-radius: 6px;
+           font-size: 1em;
+           text-transform: uppercase;
+           display: inline-block;
+           margin-top: 10px;
+           transition: all 0.3s ease;
+       }
+       .button:hover {
+           background: linear-gradient(135deg, #ff2a2a, #ff6600);
+           transform: scale(1.05);
+       }
+       .back-button {
+           padding: 14px 20px;
+           background: linear-gradient(135deg, #ff2a2a, #ff6600);
+           color: #fff;
+           text-decoration: none;
+           border-radius: 6px;
+           font-size: 1em;
+           text-transform: uppercase;
+           display: inline-block;
+           margin-top: 10px;
+           transition: all 0.3s ease;
+       }
+       .back-button:hover {
+           background: linear-gradient(135deg, #ff1a1a, #ff4c4c);
+           transform: scale(1.05);
+       }
+       .section {
+           margin: 40px 0;
+       }
+       .section h2 {
+           color: #ff9900;
+           font-size: 2em;
+       }
+       .section p, .section ul {
+           font-size: 1.1em;
+           line-height: 1.8;
+           color: #d1d1d1;
+       }
+       .bboxes-grid {
+           display: grid;
+           grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+           gap: 30px;
+           margin-top: 40px;
+       }
+       .box {
+           background: linear-gradient(145deg, #1f2a44, #2e3d56);
+           border-radius: 15px;
+           box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+           padding: 25px;
+           text-align: center;
+           color: #fff;
+           overflow: hidden;
+           transition: transform 0.3s ease, box-shadow 0.3s ease;
+       }
+       .box:hover {
+           transform: translateY(-10px);
+           box-shadow: 0 25px 55px rgba(0, 0, 0, 0.7);
+       }
+       .box h3 {
+           color: #ff9900;
+           font-size: 1.8em;
+           margin: 10px 0;
+       }
+       .box p {
+           font-size: 1.1em;
+           color: #d1d1d1;
+           margin-bottom: 20px;
+       }
+       .creator-info {
+           font-style: italic;
+           text-align: center;
+           margin-top: 30px;
+           font-size: 1.1em;
+       }
+       .language-selector {
+           position: absolute;
+           top: 20px;
+           right: 20px;
+       }
+       .language-selector button {
+           padding: 10px 15px;
+           background-color: #ff9900;
+           color: white;
+           border: none;
+           border-radius: 5px;
+           cursor: pointer;
+           font-size: 1em;
+       }
+       .language-selector button:hover {
+           background-color: #e68900;
+       }
+   </style>
+</head>
+<body>
+   <header>
+       <h1 id="header-title">Исследования</h1>
+       <p id="header-description">Добро пожаловать на страницу исследований нашей команды и студентов</p>
+   </header>
+
+
+   <!-- Add Back to Home button -->
+   <div style="text-align:center; margin-top:20px;">
+       <a href="index.html" class="back-button">Назад на главную</a>
+   </div>
+
+
+   <div class="container">
+       <div class="language-selector">
+           <button onclick="changeLanguage('en')">English</button>
+           <button onclick="changeLanguage('ru')">Русский</button>
+           <button onclick="changeLanguage('uz')">O‘zbek</button>
+       </div>
+
+
+       <div class="bboxes-grid">
+           <!-- Box 1: Переработка пластиковых отходов -->
+           <div class="box">
+               <h3 id="box-1-title">Переработка пластиковых отходов</h3>
+               <p id="box-1-description">This project focuses on transforming plastic waste into sustainable products. Using innovative chemical processes, plastic waste is converted into useful materials for various industries, contributing to waste reduction and environmental sustainability.</p>
+               <a href="research1.html" class="button">Learn More</a>
+           </div>
+
+
+           <!-- Box 2: Технология очистки воды с помощью лигнина -->
+           <div class="box">
+               <h3 id="box-2-title">Технология очистки воды с помощью лигнина</h3>
+               <p id="box-2-description">This research explores the use of lignin for water purification, aiming to improve water quality through eco-friendly methods. Lignin’s natural properties make it an ideal material for removing contaminants from water and ensuring clean resources.</p>
+               <a href="research2.html" class="button">Learn More</a>
+           </div>
+
+
+           <!-- Box 3: Устойчивые энергетические решения -->
+           <div class="box">
+               <h3 id="box-3-title">Устойчивые энергетические решения</h3>
+               <p id="box-3-description">We investigate renewable energy technologies using lignocellulosic biomass as a feedstock for sustainable energy solutions. This research includes biofuels and bio-based carbon fibers that can be used in energy storage devices.</p>
+               <a href="research3.html" class="button">Learn More</a>
+           </div>
+
+
+           <!-- Box 4: Sustainable Utilization of Lignocellulosic Waste for Industrial Applications -->
+           <div class="box">
+               <h3 id="box-4-title">Sustainable Utilization of Lignocellulosic Waste for Industrial Applications</h3>
+               <p id="box-4-description">This project aims to convert lignocellulosic waste, such as liquorice roots, into valuable industrial products, addressing global challenges in waste management, resource utilization, and environmental sustainability.</p>
+               <a href="research4.html" class="button">Learn More</a>
+           </div>
+       </div>
+
+
+   
+
+
+   <script>
+       const translations = {
+           en: {
+               "header-title": "Research",
+               "header-description": "Welcome to our team and students' research page",
+               "box-1-title": "Plastic Waste Recycling",
+               "box-1-description": "This project focuses on transforming plastic waste into sustainable products. Using innovative chemical processes, plastic waste is converted into useful materials for various industries, contributing to waste reduction and environmental sustainability.",
+               "box-2-title": "Water Purification Technology with Lignin",
+               "box-2-description": "This research explores the use of lignin for water purification, aiming to improve water quality through eco-friendly methods. Lignin’s natural properties make it an ideal material for removing contaminants from water and ensuring clean resources.",
+               "box-3-title": "Sustainable Energy Solutions",
+               "box-3-description": "We investigate renewable energy technologies using lignocellulosic biomass as a feedstock for sustainable energy solutions. This research includes biofuels and bio-based carbon fibers that can be used in energy storage devices.",
+               "box-4-title": "Sustainable Utilization of Lignocellulosic Waste for Industrial Applications",
+               "box-4-description": "This project aims to convert lignocellulosic waste, such as liquorice roots, into valuable industrial products, addressing global challenges in waste management, resource utilization, and environmental sustainability.",
+               "creator-info": "Created by: Emir-Ali Gafarov, Nurbek Torayev, Abdukhaliyev Abdumalik"
+           },
+           ru: {
+               "header-title": "Исследования",
+               "header-description": "Добро пожаловать на страницу исследований нашей команды и студентов",
+               "box-1-title": "Переработка пластиковых отходов",
+               "box-1-description": "Этот проект исследует преобразование пластиковых отходов в устойчивые продукты. Используя инновационные химические процессы, пластиковые отходы преобразуются в полезные материалы для различных отраслей, способствуя сокращению отходов и экологической устойчивости.",
+               "box-2-title": "Технология очистки воды с помощью лигнина",
+               "box-2-description": "Это исследование посвящено использованию лигнина для очистки воды, с целью улучшения качества воды с использованием экологически чистых методов. Природные свойства лигнина делают его идеальным материалом для удаления загрязняющих веществ из воды и обеспечения чистых ресурсов.",
+               "box-3-title": "Устойчивые энергетические решения",
+               "box-3-description": "Мы исследуем технологии возобновляемой энергии, используя лигноцеллюлозную биомассу в качестве сырья для устойчивых энергетических решений. Это исследование включает биотопливо и углеродные волокна на основе биоматериалов, которые могут быть использованы в устройствах для хранения энергии.",
+               "box-4-title": "Устойчивое использование лигноцеллюлозных отходов в промышленности",
+               "box-4-description": "Этот проект направлен на преобразование лигноцеллюлозных отходов, таких как корни солодки, в ценные промышленные продукты, решая глобальные проблемы в области управления отходами, использования ресурсов и экологической устойчивости.",
+               "creator-info": "Создано: Гафаров Эмир-Али, Тораев Нурбек, Абдухалимов Абдумалик"
+           },
+           uz: {
+               "header-title": "Tadqiqotlar",
+               "header-description": "Jamoamiz va talabalarimiz tadqiqotlari sahifasiga xush kelibsiz",
+               "box-1-title": "Plastik chiqindilarni qayta ishlash",
+               "box-1-description": "Ushbu loyiha plastik chiqindilarni barqaror mahsulotlarga aylantirishni o‘rganadi. Innovatsion kimyoviy jarayonlar yordamida plastik chiqindilar turli sanoat uchun foydali materiallarga aylantiriladi, chiqindilarni kamaytirish va ekologik barqarorlikka hissa qo‘shadi.",
+               "box-2-title": "Lignin yordamida suvni tozalash texnologiyasi",
+               "box-2-description": "Bu tadqiqot liginni suvni tozalashda foydalanishni o‘rganadi, ekologik toza usullar yordamida suv sifatini yaxshilashga qaratilgan. Ligninning tabiiy xususiyatlari uni suvdagi ifloslantiruvchi moddalarni olib tashlashda va toza resurslarni ta’minlashda ideal materialga aylantiradi.",
+               "box-3-title": "Barqaror energiya yechimlari",
+               "box-3-description": "Biz qayta tiklanuvchi energiya texnologiyalarini o‘rganamiz, liginotsellyulozli biomassani barqaror energiya yechimlari uchun xom ashyo sifatida ishlatamiz. Ushbu tadqiqot biokarbonsuzlar va energiya saqlash qurilmalari uchun ishlatiladigan biotexnologiyalarni o‘z ichiga oladi.",
+               "box-4-title": "Lignotsellyulozli chiqindilarni sanoat maqsadlarida barqaror ishlatish",
+               "box-4-description": "Ushbu loyiha, solodka ildizlari kabi lignotsellyulozli chiqindilarni qimmatli sanoat mahsulotlariga aylantirishni maqsad qilgan, chiqindilarni boshqarish, resurslardan foydalanish va ekologik barqarorlik sohasidagi global muammolarni hal qilishga qaratilgan.",
+               "creator-info": "Tayyorlangan: Gafarov Emir-Ali, To‘rayev Nurbek, Abduhalimov Abduhamalik"
+           }
+       };
+
+
+       function changeLanguage(lang) {
+           document.getElementById("header-title").innerHTML = translations[lang]["header-title"];
+           document.getElementById("header-description").innerHTML = translations[lang]["header-description"];
+           document.getElementById("box-1-title").innerHTML = translations[lang]["box-1-title"];
+           document.getElementById("box-1-description").innerHTML = translations[lang]["box-1-description"];
+           document.getElementById("box-2-title").innerHTML = translations[lang]["box-2-title"];
+           document.getElementById("box-2-description").innerHTML = translations[lang]["box-2-description"];
+           document.getElementById("box-3-title").innerHTML = translations[lang]["box-3-title"];
+           document.getElementById("box-3-description").innerHTML = translations[lang]["box-3-description"];
+           document.getElementById("box-4-title").innerHTML = translations[lang]["box-4-title"];
+           document.getElementById("box-4-description").innerHTML = translations[lang]["box-4-description"];
+           document.getElementById("creator-info").innerHTML = translations[lang]["creator-info"];
+       }
+   </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
