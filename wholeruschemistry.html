@@ -5,83 +5,71 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Всероссийская олимпиада - Файлы</title>
   <style>
+      /* Общие стили */
       body {
-          font-family: Arial, sans-serif;
+          font-family: 'Roboto', sans-serif;
           margin: 0;
           padding: 0;
-          background: linear-gradient(135deg, #51205a, #ffffff);
-          color: #000;
+          background-color: #f7f9fc;
+          color: #451313;
           display: flex;
           flex-direction: column;
           align-items: center;
           min-height: 100vh;
       }
 
-
-
-
+      /* Заголовок */
       header {
-          background: #70386a;
-          color: #fff;
+          background-color: #650c0c;
+          color: white;
           padding: 20px;
           text-align: center;
           width: 100%;
-          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
       }
-
-
-
 
       header h1 {
           margin: 0;
+          font-size: 2.5em;
+          font-weight: bold;
       }
 
-
-
-
+      /* Основной контент */
       main {
           margin: 20px 0;
-          display: flex;
-          flex-wrap: wrap;
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
           gap: 20px;
           justify-content: center;
           max-width: 1200px;
           width: 100%;
+          padding: 0 20px;
       }
 
-
-
-
+      /* Блоки с годами */
       .year-container {
-          background: #fff;
-          border-radius: 8px;
-          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          background-color: #ffffff;
+          border-radius: 12px;
           padding: 20px;
-          width: 300px;
           text-align: center;
-          transition: transform 0.3s, box-shadow 0.3s;
+          box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+          cursor: pointer;
+          border: 1px solid #e1e9f0;
       }
-
-
-
 
       .year-container:hover {
-          transform: translateY(-5px);
-          box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+          transform: translateY(-8px);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
       }
-
-
-
 
       .year-container h2 {
-          margin: 0 0 10px;
-          font-size: 24px;
-          color: #70386a;
+          font-size: 1.6em;
+          color: #000000;
+          margin: 0 0 15px;
       }
 
-
-
-
+      /* Секция с файлами */
       .file-section {
           margin-top: 10px;
           display: flex;
@@ -89,51 +77,47 @@
           gap: 10px;
       }
 
-
-
-
       .file-section a {
           padding: 10px 15px;
-          background: #70386a;
+          background-color: #350b0b;
           color: white;
           text-decoration: none;
-          border-radius: 5px;
-          font-size: 16px;
+          border-radius: 8px;
+          font-size: 1.1em;
           text-align: center;
-          transition: background 0.3s;
+          transition: background-color 0.3s ease;
       }
-
-
-
 
       .file-section a:hover {
-          background: #51205a;
+          background-color: #51205a;
       }
 
-
-
-
+      /* Кнопка "Назад" */
       .back-button {
           margin-top: 20px;
           padding: 10px 20px;
-          background-color: #51205a;
+          background-color: #70386a;
           color: white;
           text-decoration: none;
-          font-size: 16px;
-          border-radius: 5px;
-          transition: background-color 0.3s;
+          font-size: 1.1em;
+          border-radius: 8px;
+          transition: background-color 0.3s ease;
       }
-
-
-
 
       .back-button:hover {
-          background-color: #70386a;
+          background-color: #51205a;
       }
 
+      /* Адаптивность */
+      @media (max-width: 768px) {
+          header h1 {
+              font-size: 2em;
+          }
 
-
-
+          main {
+              grid-template-columns: 1fr;
+          }
+      }
   </style>
 </head>
 <body>
