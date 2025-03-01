@@ -5,63 +5,56 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Олимпиады</title>
    <style>
-       /* Общие стили */
-       body {
-           font-family: 'Roboto', sans-serif;
-           margin: 0;
-           padding: 0;
-           background: linear-gradient(135deg, #3f51b5, #e0f7fa);
-           color: #000000;
-           height: 100vh;
-           display: flex;
-           justify-content: center;
-           align-items: center;
-           flex-direction: column;
-       }
+      /* Общие стили */
+      body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f9fc;
+            color: #451313;
+        }
 
 
        header {
-           text-align: center;
-           width: 100%;
-           max-width: 800px;
+        text-align: center;
+            padding: 40px 20px;
+            background-color: #650c0c;
+            color: white;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
        }
 
 
        header h1 {
+        font-size: 48px;
            margin: 0;
-           font-size: 48px;
-           color: #ffffff;
-           background: #283593;
-           padding: 20px 40px;
-           border-radius: 12px;
-           box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
        }
 
 
+
        main {
-           padding: 40px 20px;
-           max-width: 1200px;
-           margin: auto;
+           padding: 20px;
            text-align: center;
        }
 
 
        .course-section {
            display: flex;
-           justify-content: center;
            flex-wrap: wrap;
-           gap: 30px;
+           justify-content: center;
+           gap: 20px;
        }
 
 
        .course {
-           background: #ffffff;
+           background: linear-gradient(135deg, #ffffff, #f7e8ff);
            border-radius: 12px;
            padding: 20px;
            width: 280px;
            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
            transition: transform 0.3s ease, box-shadow 0.3s ease;
            text-align: center;
+           position: relative;
+           overflow: hidden;
        }
 
 
@@ -74,7 +67,7 @@
        .course h2 {
            margin: 10px 0;
            font-size: 24px;
-           color: #283593;
+           color:  #451313;
            font-weight: 700;
        }
 
@@ -90,39 +83,37 @@
            text-decoration: none;
            font-size: 16px;
            color: #ffffff;
-           background: linear-gradient(90deg, #1e88e5, #43a047);
+           background: #451313; 
            padding: 10px 20px;
            border-radius: 8px;
            transition: background 0.3s ease, color 0.3s ease;
        }
 
 
+
        .course a:hover {
-           background: #43a047;
-           color: #e0f7fa;
+           background: #451313; 
        }
 
 
-         /* Кнопка "Назад на главную страницу" */
-         .back-button {
-           position: absolute;
-           top: 20px;
-           left: 20px;
-           background: linear-gradient(90deg, #43a047, #1e88e5);
+       /* Кнопка "Назад на главную страницу" */
+       .back-button {
+           display: absolute;
+           margin-top: 10px;
+           font-size: 18px;
            color: #ffffff;
-           border: none;
-           padding: 10px 20px;
+           text-decoration: none;
+           font-weight: bold;
+           padding: 8px 12px;
+           border: 2px solid #ffffff;
            border-radius: 8px;
-           font-size: 16px;
-           cursor: pointer;
-           box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-           transition: background 0.3s ease, transform 0.2s ease;
+           background-color: #451313;
+           transition: background-color 0.3s ease, color 0.3s ease;
        }
-
 
        .back-button:hover {
-           background: #1e88e5;
-           transform: scale(1.05);
+           background-color: #ffffff;
+           color: #451313; 
        }
    </style>
 </head>

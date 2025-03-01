@@ -5,82 +5,117 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Биофизика</title>
     <style>
+        /* Общие стили */
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
-            background: linear-gradient(135deg, #51205a, #ffffff);
-            color: #333;
+            background-color: #f7f9fc;
+            color: #451313;
         }
+
+        /* Заголовок */
         header {
             text-align: center;
-            background: #70386a;
+            padding: 40px 20px;
+            background-color: #650c0c;
             color: white;
-            padding: 20px 0;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
+
         h1 {
             margin: 0;
-            font-size: 36px;
+            font-size: 3.5em;
+            font-weight: bold;
         }
+
+        /* Контейнер с элементами */
         .container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 20px;
             padding: 40px 20px;
             max-width: 1200px;
-            margin: auto;
+            margin: 0 auto;
         }
+
+        /* Блоки с уроками и задачами */
         .box {
-            background: #fefefe;
+            background-color: #ffffff;
             border-radius: 12px;
-            padding: 20px;
-            width: 300px;
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            padding: 25px;
             text-align: center;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            border: 1px solid #e1e9f0;
         }
+
         .box:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            transform: translateY(-8px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
         }
+
         .box h2 {
+            font-size: 1.6em;
+            color: #000000;
             margin: 0 0 15px;
-            font-size: 24px;
-            color: #51205a;
         }
+
+        .box p {
+            font-size: 1.2em;
+            color: #7f8c8d;
+            margin: 0 0 20px;
+        }
+
+        /* Кнопки */
         .buttons {
             display: flex;
             justify-content: space-around;
             margin-top: 15px;
         }
+
         .buttons a {
             text-decoration: none;
             color: white;
-            background: #51205a;
+            background-color: #350b0b;
             padding: 10px 15px;
             border-radius: 8px;
-            transition: background 0.3s ease;
+            transition: background-color 0.3s ease;
         }
+
         .buttons a:hover {
-            background: #357ab9;
+            background-color:#451313; 
         }
+
+        /* Кнопка "Назад" */
         .back-button {
             text-align: center;
             margin-top: 20px;
         }
+
         .back-button a {
             text-decoration: none;
             color: white;
-            background: #70386a;
+            background-color: #451313;
             padding: 10px 20px;
             border-radius: 8px;
-            transition: background 0.3s ease;
+            transition: background-color 0.3s ease;
         }
+
         .back-button a:hover {
-            background: #51205a;
+            background-color: #650c0c;
+        }
+
+        /* Адаптивность */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5em;
+            }
+
+            .container {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
